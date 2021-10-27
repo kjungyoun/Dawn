@@ -650,7 +650,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "\uB098\uB294 20\uB300 \uC911\uBC18\t"
+    - "\uB098\uB294 20\uB300 \uC911\uBC18\uC774\uB2E4."
     - "\uC544\uC9C1 \uCDE8\uC900\uC744 \uD558\uB294 \uC911"
     - "\uC9C4\uC804\uC774 \uC5C6\uB2E4...."
     persons:
