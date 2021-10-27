@@ -26,4 +26,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GoHomeScene.unity
     guid: b3c510460813d49aba7cec39acf6e85c
+  - enabled: 1
+    path: Assets/Scenes/DoPjtScene.unity
+    guid: 53a3864f58b80437b86b60b1d655e40f
+  - enabled: 1
+    path: Assets/Scenes/AfterPjtScene.unity
+    guid: 9b1e0890ac6714334af3cc0be5f2f6fb
   m_configObjects: {}
