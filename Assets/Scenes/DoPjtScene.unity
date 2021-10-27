@@ -216,7 +216,33 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &53464692
+--- !u!114 &156749086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 156749085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7463b52a8d9cf4065b126be88dc48651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    sentences:
+    - "\uB9DE\uB2E4... \uC54C\uBC14\uB3C4 \uD588\uC5C8\uC9C0...?"
+    - "(\uC5EC\uAE30!! \uBD88\uD310 \uC880 \uAC08\uC544\uC8FC\uC138\uC694~!!!)"
+    - "\uC544...\uC9C4\uC9DC \uD798\uB4E4\uC5C8\uB294\uB370 \uC5B4\uB5BB\uAC8C \uBC84\uD17C\uB0D0...?"
+    persons:
+    - {fileID: 0}
+    - {fileID: 21300000, guid: 768967bc239114dc082f5cee62e80eb8, type: 3}
+    - {fileID: 21300000, guid: deeb422d6f135493787e74fb40c2b2cb, type: 3}
+    dialogueWindows:
+    - {fileID: 21300000, guid: e01d2507434e144c88ba83c635b72104, type: 3}
+    - {fileID: 21300000, guid: 53898ed1e039c41678e2d5a4f5a3c52d, type: 3}
+    - {fileID: 21300000, guid: 53898ed1e039c41678e2d5a4f5a3c52d, type: 3}
+  image: {fileID: 1763362947}
+--- !u!4 &156749087
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
