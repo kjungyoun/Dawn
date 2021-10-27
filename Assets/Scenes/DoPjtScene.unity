@@ -460,7 +460,7 @@ MonoBehaviour:
   aniDialogueWindow: {fileID: 53464693}
   talking: 0
   image: {fileID: 1430657015}
-  sceneName: None
+  sceneName: AfterPjtScene
 --- !u!1 &476535103
 GameObject:
   m_ObjectHideFlags: 0
