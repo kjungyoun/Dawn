@@ -15,15 +15,30 @@ EditorBuildSettings:
     path: Assets/Scenes/SojuScene.unity
     guid: 793c5a1bc6425469f861cc039ecbd7fa
   - enabled: 1
+    path: Assets/Scenes/AfterCompetitionGame.unity
+    guid: c97c4cec4e12740a38ee8db7441bb941
+  - enabled: 1
+    path: Assets/Scenes/CompetitionScene.unity
+    guid: 447836b3f249341f29156edd15dc2c69
+  - enabled: 1
     path: Assets/Scenes/SojuGameScene.unity
     guid: 5cb9dabb8647141878cf8ddb03b63b19
   - enabled: 1
     path: Assets/Scenes/SojuGamePlayScene.unity
     guid: f42951659137e4f47bd628bf7cda55b6
   - enabled: 1
+    path: Assets/Scenes/CompetitionGameScene.unity
+    guid: 954449e4a8ea74c39a23ee39da96e0cd
+  - enabled: 1
     path: Assets/Scenes/AfterSojuScene.unity
     guid: 6214b4adfb050441cba55ef40e06b7ba
   - enabled: 1
     path: Assets/Scenes/GoHomeScene.unity
     guid: b3c510460813d49aba7cec39acf6e85c
+  - enabled: 1
+    path: Assets/Scenes/EndCompetitionGame.unity
+    guid: 0a1b47bdcc6514c7594fbc1c34de88b9
+  - enabled: 1
+    path: Assets/Scenes/CafeScene.unity
+    guid: 3e96f9c4f4914436095f73c4b2cc8c09
   m_configObjects: {}
