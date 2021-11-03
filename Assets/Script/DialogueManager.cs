@@ -160,9 +160,9 @@ public class DialogueManager : MonoBehaviour
                     // 화면 어두워짐
                     fadeManager.FadeIn(image);
 
-                    if(!sceneName.Equals("None"))
-                    // 씬 넘어감
-                    StartCoroutine(LoadCoroutine(sceneName));
+                    if (!sceneName.Equals("None"))
+                        // 씬 넘어감
+                        StartCoroutine(LoadCoroutine(sceneName));
                 }
                 else
                 {
