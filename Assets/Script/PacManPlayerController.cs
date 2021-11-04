@@ -1,46 +1,59 @@
 using UnityEngine;
 using System.Collections;
-
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class PacManPlayerController : MonoBehaviour
 {
 
     private LayerMask tileLayer;
     private float rayDistance = 0.55f;
-    private Vector2 moveDirection = Vector2.right;
-    private Direction direction = Direction.Right;
+    private Vector2 moveDirection = Vector2.zero;
+    private Direction direction = Direction.None;
+    private int enemyNum = 3;
+    private int sojuNum = 62;
+    [SerializeField]
+    private Image[] lifeImages;
 
     private AroundWrap aroundWrap;
     private PacManMovementScript pacManMovementScript;
     private SpriteRenderer spriteRenderer;
 
+    private FadeManager fadeManager;
+    public Image image; // fade 용 Image
+    public string sceneName; // 전환할 scene 이름
+
+    [SerializeField]
+    private VirtualJoystick virtualJoystick;
+
     private void Awake()
     {
         tileLayer = 1 << LayerMask.NameToLayer("Tile");
 
-        pacManMovementScript    = GetComponent<PacManMovementScript>();
-        aroundWrap              = GetComponent<AroundWrap>();
-        spriteRenderer          = GetComponent<SpriteRenderer>();
+        pacManMovementScript = GetComponent<PacManMovementScript>();
+        aroundWrap = GetComponent<AroundWrap>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
     private void Update()
     {
+        int a = virtualJoystick.getDirection();
         // 1. 방향키 입력으로 이동방향 설정
-        if (Input.GetKeyDown(KeyCode.UpArrow))
+        if (a == 0)
         {
             moveDirection = Vector2.up;
             direction = Direction.Up;
         }
-        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        else if (a == 2)
         {
             moveDirection = Vector2.left;
             direction = Direction.Left;
         }
-        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        else if (a == 3)
         {
             moveDirection = Vector2.right;
             direction = Direction.Right;
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (a == 1)
         {
             moveDirection = Vector2.down;
             direction = Direction.Down;
@@ -69,16 +82,41 @@ public class PacManPlayerController : MonoBehaviour
         if (collision.CompareTag("Item"))
         {
             // 아이템 획득 처리 (현재는 아이템을 파괴하기만 한다)
+            sojuNum -= 1;
             Destroy(collision.gameObject);
+
+            if(sojuNum == 0)
+            {
+                GameOver("SojuGameOverSceneSuccess");
+            }
         }
 
         if (collision.CompareTag("Enemy"))
         {
             // 플레이어 캐릭터의 체력 감소 등 처리
+
+            enemyNum -= 1;
+            UpdateLifeIcon();
             StopCoroutine("OnHit");
             StartCoroutine("OnHit");
             Destroy(collision.gameObject);
+            if (enemyNum == 0)
+            {
+                GameOver("SojuGameOverScene");
+            }
         }
+
+    }
+
+    private void GameOver(string sceneName)
+    {
+        StartCoroutine(LoadCoroutine(sceneName));
+    }
+
+    IEnumerator LoadCoroutine(string sceneName)
+    {
+        yield return new WaitForSeconds(1.5f);
+        SceneManager.LoadScene(sceneName);
     }
 
     private IEnumerator OnHit()
@@ -89,4 +127,18 @@ public class PacManPlayerController : MonoBehaviour
 
         spriteRenderer.color = Color.white;
     }
+
+    private void UpdateLifeIcon()
+    {
+        for (int index = 0; index < 3; index++ )
+        {
+            lifeImages[index].color = new Color(1, 1, 1, 0);
+        }
+
+        for (int index = 0; index < enemyNum; index++)
+        {
+            lifeImages[index].color = new Color(1, 1, 1, 1);
+        }
+    }
+
 }

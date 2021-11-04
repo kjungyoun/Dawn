@@ -31,9 +31,6 @@ public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler,
             imageController.rectTransform.anchoredPosition = new Vector2(
                 touchPosition.x * imageBackground.rectTransform.sizeDelta.x / 4,
                 touchPosition.y * imageBackground.rectTransform.sizeDelta.y / 4);
-
-            Debug.Log("Touch Position :" + touchPosition.x );
-            Debug.Log("Touch Position :" + touchPosition.y);
         }
     }
 
@@ -55,5 +52,44 @@ public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler,
     public float Vertical()
     {
         return touchPosition.y;
+    }
+
+    public int getDirection()
+    {
+        if (touchPosition == Vector2.zero)
+        {
+            return -1;
+        }
+        else
+        {
+            if (touchPosition.x <= 0.5 && touchPosition.x >= -0.5)
+            {
+                if (touchPosition.y >= 0)
+                {
+                    Debug.Log("up");
+                    return 0;
+                }
+                else
+                {
+                    Debug.Log("Down");
+                    return 1;
+                }
+            }
+
+            if (touchPosition.y <= 0.5 && touchPosition.y >= -0.5)
+            {
+                if (touchPosition.x < 0)
+                {
+                    Debug.Log("Left");
+                    return 2;
+                }
+                else
+                {
+                    Debug.Log("Right");
+                    return 3;
+                }
+            }
+        }
+        return -1;
     }
 }
