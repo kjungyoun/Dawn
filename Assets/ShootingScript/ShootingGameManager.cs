@@ -67,6 +67,7 @@ public class ShootingGameManager : MonoBehaviour
         player.transform.position = Vector3.down * 4f;
         player.SetActive(true);
 
+        // 한꺼번에 두발을 동시에 맞는 일이 사라지는 로직 isHit을 통해 제어
         ShootingPlayer playerLogic = player.GetComponent<ShootingPlayer>();
         playerLogic.isHit = false;
     }

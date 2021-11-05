@@ -149,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d0f01d5cb6a3412dbf03a9efa482b59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   enemyName: M
   speed: 5
   Sprites:
@@ -161,3 +162,10 @@ MonoBehaviour:
   player: {fileID: 0}
   maxShotDelay: 0
   curShotDelay: 0
+=======
+  speed: 5
+  health: 15
+  Sprites:
+  - {fileID: -1147401495359466748, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+  - {fileID: -7844560889915226194, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+>>>>>>> 7e932bb87f4f377b0aaa8a65e9a90a5a7692c45c
