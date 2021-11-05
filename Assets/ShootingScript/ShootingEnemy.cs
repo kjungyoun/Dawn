@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootingEnemy : MonoBehaviour
 {
-<<<<<<< HEAD
+
 
     public string enemyName;
     public float speed;
@@ -21,11 +21,6 @@ public class ShootingEnemy : MonoBehaviour
 
     public float maxShotDelay; // max에 알맞게 왔으면 다시 curShotDelay을 0으로 초기화하면서 쏘고
     public float curShotDelay; // 총알 쏘고 시간이 흐르고
-=======
-    public float speed;
-    public int health;
-    public Sprite[] Sprites;
->>>>>>> 7e932bb87f4f377b0aaa8a65e9a90a5a7692c45c
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
@@ -37,7 +32,7 @@ public class ShootingEnemy : MonoBehaviour
         rigid.velocity = Vector2.down * speed;
     }
 
-<<<<<<< HEAD
+
     void Update()
     {
         

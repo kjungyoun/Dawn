@@ -181,14 +181,10 @@ TextureImporter:
         height: 32
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
-<<<<<<< HEAD
-      border: {x: 3, y: 6, z: 3, w: 3}
-=======
       border: {x: 0, y: 0, z: 0, w: 0}
->>>>>>> 7e932bb87f4f377b0aaa8a65e9a90a5a7692c45c
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
       spriteID: 23b75c02828283560800000000000000
       internalID: 7293623749340134194
@@ -196,52 +192,10 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Button B
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 20
-        width: 34
-        height: 26
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 574473497ab991a50800000000000000
-      internalID: 6492391481879774325
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Life
-      rect:
-        serializedVersion: 2
-        x: 33
-        y: 0
-        width: 16
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 406979ff0a0931f30800000000000000
-      internalID: 4545135470104253956
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 

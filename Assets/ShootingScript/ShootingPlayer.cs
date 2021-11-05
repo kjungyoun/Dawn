@@ -22,7 +22,7 @@ public class ShootingPlayer : MonoBehaviour
     public float maxShotDelay; // max에 알맞게 왔으면 다시 curShotDelay을 0으로 초기화하면서 쏘고
     public float curShotDelay; // 총알 쏘고 시간이 흐르고
 
-<<<<<<< HEAD
+
     public int life;
     public int score;
 
@@ -30,8 +30,7 @@ public class ShootingPlayer : MonoBehaviour
 
     public bool isHit;
 
-=======
->>>>>>> 7e932bb87f4f377b0aaa8a65e9a90a5a7692c45c
+
     // Animator 초기화
     Animator anim;
 
@@ -40,12 +39,6 @@ public class ShootingPlayer : MonoBehaviour
         anim = GetComponent<Animator>();
     }
 
-<<<<<<< HEAD
-=======
-    
-
-
->>>>>>> 7e932bb87f4f377b0aaa8a65e9a90a5a7692c45c
     void Update()
     {
         Move(); // 이동
@@ -145,7 +138,6 @@ public class ShootingPlayer : MonoBehaviour
                     break;
             }
         }
-<<<<<<< HEAD
         else if(collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
         {
             if (isHit)
@@ -169,8 +161,6 @@ public class ShootingPlayer : MonoBehaviour
             Destroy(collision.gameObject);
             // 플레이어를 활성화시키는(부활) 로직은 GameManager에서 관
         }
-=======
->>>>>>> 7e932bb87f4f377b0aaa8a65e9a90a5a7692c45c
     }
 
     // 이 부분은 isTouch에서 true로 바꾼 애들을 다시 false로 바꾸는 과정이다.
