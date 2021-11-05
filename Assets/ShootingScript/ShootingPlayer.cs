@@ -22,6 +22,15 @@ public class ShootingPlayer : MonoBehaviour
     public float maxShotDelay; // max에 알맞게 왔으면 다시 curShotDelay을 0으로 초기화하면서 쏘고
     public float curShotDelay; // 총알 쏘고 시간이 흐르고
 
+
+    public int life;
+    public int score;
+
+    public ShootingGameManager shootingGameManager;
+
+    public bool isHit;
+
+
     // Animator 초기화
     Animator anim;
 
@@ -29,9 +38,6 @@ public class ShootingPlayer : MonoBehaviour
     {
         anim = GetComponent<Animator>();
     }
-
-    
-
 
     void Update()
     {
@@ -131,6 +137,29 @@ public class ShootingPlayer : MonoBehaviour
                     isTouchLeft = true;
                     break;
             }
+        }
+        else if(collision.gameObject.tag == "EnemyBullet" || collision.gameObject.tag == "Enemy")
+        {
+            if (isHit)
+                return;
+
+            isHit = true;
+
+            life--;
+            shootingGameManager.UpdateLifeIcon(life);
+
+            if(life == 0)
+            {
+                shootingGameManager.GameOver();
+            }
+            else
+            {
+                shootingGameManager.RespawnPlayer();
+            }
+            
+            gameObject.SetActive(false); // 플레이어 비활성화!
+            Destroy(collision.gameObject);
+            // 플레이어를 활성화시키는(부활) 로직은 GameManager에서 관
         }
     }
 
