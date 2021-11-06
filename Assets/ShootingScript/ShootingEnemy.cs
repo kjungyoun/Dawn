@@ -6,7 +6,7 @@ public class ShootingEnemy : MonoBehaviour
 {
     public float speed;
     public int health;
-    public Sprite[] Sprites;
+    public Sprite[] sprites;
 
     SpriteRenderer spriteRenderer;
     Rigidbody2D rigid;
@@ -21,7 +21,7 @@ public class ShootingEnemy : MonoBehaviour
     void OnHit(int dmg)
     {
         health -= dmg;
-        spriteRenderer.sprite = Sprites[1]; // 적이 내 총알을 맞았을 때, 흰색으로 변함
+        spriteRenderer.sprite = sprites[1]; // 적이 내 총알을 맞았을 때, 흰색으로 변함
         Invoke("ReturnSprite", 0.1f);
         if (health <= 0)
         {
@@ -31,7 +31,7 @@ public class ShootingEnemy : MonoBehaviour
 
     void ReturnSprite()
     {
-        spriteRenderer.sprite = Sprites[1]; // 적이 내 총알을 맞았을 때, 다시 돌아옴
+        spriteRenderer.sprite = sprites[0]; // 적이 내 총알을 맞았을 때, 다시 돌아옴
     }
 
     void OnTriggerEnter2D(Collider2D collision)
