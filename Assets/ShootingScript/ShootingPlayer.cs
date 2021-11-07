@@ -15,7 +15,7 @@ public class ShootingPlayer : MonoBehaviour
     // 총알 변수
     public GameObject bulletObjA;
     public GameObject bulletObjB;
-
+    public ShootingGameManager GameManager;
     // 총알 나오는 횟수
     public float speed; // 비행기 속도
     public float power; // 파워
@@ -131,6 +131,11 @@ public class ShootingPlayer : MonoBehaviour
                     isTouchLeft = true;
                     break;
             }
+        }
+        else if(collision.gameObject.tag == "Enemy" || collision.gameObject.tag == "EnemyBullet")
+        {
+            GameManager.RespawnPlayer();
+            gameObject.SetActive(false);
         }
     }
 
