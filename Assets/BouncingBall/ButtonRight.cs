@@ -28,15 +28,15 @@ public class ButtonRight : MonoBehaviour, IPointerDownHandler, IPointerUpHandler
     void Update()
     {
 
-        if (check)
-        {
-            playerController.UpdateMove(-1);
-        }
-        else
-        {
-            playerController.UpdateMove(0);
+        //if (check)
+        //{
+        //    playerController.UpdateMove(-1);
+        //}
+        //else
+        //{
+        //    playerController.UpdateMove(0);
 
-        }
+        //}
 
     }
 
