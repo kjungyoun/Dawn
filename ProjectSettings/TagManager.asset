@@ -4,7 +4,15 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< HEAD
   - Item
+=======
+  - Border
+  - BorderBullet
+  - Enemy
+  - PlayerBullet
+  - EnemyBullet
+>>>>>>> 46a3ea0c1e4a791876ee30ab3a54288448ecef94
   layers:
   - Default
   - TransparentFX
@@ -12,7 +20,11 @@ TagManager:
   - 
   - Water
   - UI
+<<<<<<< HEAD
   - Tile
+=======
+  - 
+>>>>>>> 46a3ea0c1e4a791876ee30ab3a54288448ecef94
   - 
   - 
   - 
