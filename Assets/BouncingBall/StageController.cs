@@ -47,7 +47,7 @@ public class StageController : MonoBehaviour
         }
         else
         {
-            SceneLoader.LoadScene("BouncingSuccess");
+            SceneLoader.LoadScene("AfterDishSuccessScene");
         }
     }
 }

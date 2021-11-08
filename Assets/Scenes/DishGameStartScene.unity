@@ -866,7 +866,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Anigame: {fileID: 23526127}
-  next: DishGamePlayScene
+  next: Intro
 --- !u!4 &1988064192
 Transform:
   m_ObjectHideFlags: 0

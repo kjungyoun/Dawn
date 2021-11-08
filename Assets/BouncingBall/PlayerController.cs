@@ -27,7 +27,7 @@ public class PlayerController : MonoBehaviour
         if(transform.position.y <= deathLimitY)
         {       
             //Debug.Log("플레이어 사망");
-            SceneLoader.LoadScene("BouncingFail");
+            SceneLoader.LoadScene("AfterDishFailedScene");
         }
         //UpdateMove();
         UpdateCollision();
