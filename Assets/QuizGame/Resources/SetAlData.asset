@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
   m_Name: SetAlData
   m_EditorClassIdentifier: 
-  categoryName: SET A
+  categoryName: "\uAE30\uC0AC\uC790\uACA9\uC99D"
   questions:
   - questionInfo: "\uD78C\uD2B8\uD78C\uD2B8"
     questionType: 1

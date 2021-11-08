@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
@@ -12,7 +13,7 @@ public class QuizManager : MonoBehaviour
 #pragma warning restore 649
 
     private string currentCategory = "";
-    private int correctAnswerCount = 0;
+    //private int correctAnswerCount = 0;
     private List<Question> questions;
     private Question selectedQuetion = new Question();
     private int gameScore;
@@ -29,7 +30,7 @@ public class QuizManager : MonoBehaviour
     public void StartGame(int categoryIndex, string category)
     {
         currentCategory = category;
-        correctAnswerCount = 0;
+        //correctAnswerCount = 0;
         gameScore = 0;
         lifesRemaining = 3;
         currentTime = timeInSeconds;
@@ -85,7 +86,7 @@ public class QuizManager : MonoBehaviour
         if (selectedQuetion.correctAns == selectedOption)
         {
             // 정답 O
-            correctAnswerCount++;
+            //correctAnswerCount++;
             correct = true;
             gameScore += 20;
             quizGameUI.ScoreText.text = "Score:" + gameScore;
@@ -98,7 +99,8 @@ public class QuizManager : MonoBehaviour
 
             if (lifesRemaining == 0)
             {
-                GameEnd();
+                // 게임 실패시
+                GameOver();
             }
         }
 
@@ -109,7 +111,7 @@ public class QuizManager : MonoBehaviour
                 // SelectQuestion 1초 후 다시 불러오기
                 Invoke("SelectQuestion", 0.4f);
             }
-            else
+            else // 전부다 성공했을 때
             {
                 GameEnd();
             }
@@ -117,7 +119,20 @@ public class QuizManager : MonoBehaviour
         return correct;
     }
 
-    private void GameEnd()
+
+    private void GameEnd() // 게임 성공시
+    {
+        gameStatus = GameStatus.NEXT;
+        quizGameUI.GameEndPanel.SetActive(true);
+
+        //fi you want to save only the highest score then compare the current score with saved score and if more save the new score
+        //eg:- if correctAnswerCount > PlayerPrefs.GetInt(currentCategory) then call below line
+
+        // 최근 score 저장
+        //PlayerPrefs.SetInt(currentCategory, correctAnswerCount); //save the score for this category
+    }
+
+    private void GameOver() // 게임 실패시
     {
         gameStatus = GameStatus.NEXT;
         quizGameUI.GameOverPanel.SetActive(true);
@@ -126,7 +141,7 @@ public class QuizManager : MonoBehaviour
         //eg:- if correctAnswerCount > PlayerPrefs.GetInt(currentCategory) then call below line
 
         // 최근 score 저장
-        PlayerPrefs.SetInt(currentCategory, correctAnswerCount); //save the score for this category
+        //PlayerPrefs.SetInt(currentCategory, correctAnswerCount); //save the score for this category
     }
 }
 

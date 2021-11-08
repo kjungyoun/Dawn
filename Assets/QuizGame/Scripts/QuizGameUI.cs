@@ -12,7 +12,7 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private GameObject scrollHolder;
     [SerializeField] private Text scoreText, timerText;
     [SerializeField] private List<Image> lifeImageList;
-    [SerializeField] private GameObject gameOverPanel, mainMenu, gamePanel;
+    [SerializeField] private GameObject gameOverPanel, mainMenu, gamePanel, gameEndPanel;
     [SerializeField] private Color correctCol, wrongCol, normalCol; // 성공 실패 기본
     [SerializeField] private Image questionImg;                     
     [SerializeField] private UnityEngine.Video.VideoPlayer questionVideo;   
@@ -29,6 +29,7 @@ public class QuizGameUI : MonoBehaviour
     public Text TimerText { get => timerText; }                     
     public Text ScoreText { get => scoreText; }
     public GameObject GameOverPanel { get => gameOverPanel; }
+    public GameObject GameEndPanel { get => gameEndPanel; }
 
     private void Start()
     {
@@ -174,9 +175,14 @@ public class QuizGameUI : MonoBehaviour
         }
     }
 
-    public void RetryButton()
+    public void FailedButton()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneManager.LoadScene("AfterCompetitionFailedScene");
+    }
+
+    public void SuccessButton()
+    {
+        SceneManager.LoadScene("AfterCompetitionSuccessScene");
     }
 
 }

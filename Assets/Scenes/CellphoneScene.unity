@@ -650,16 +650,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1145738232}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5338d576c23b94d9fb806d2f420a5741, type: 3}
+  m_Script: {fileID: 11500000, guid: 5cf13182c49b37545b5ed88b0f83650e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "\"\uAE4C\uB611!\""
-    - "... \uB204\uAD6C\uC9C0???"
-    - "\uC5B4?? \uC18C\uD76C\uB2E4!"
-    - "\uC640 \uCDE8\uC5C5\uD588\uAD6C\uB098... \uC88B\uACA0\uB2E4...\n\uC77C\uB2E8
-      \uB098\uAC00\uC790!!"
+    - "\"\uAE4C\uD1A1!\""
+    - "... \uB204\uAD6C\uC9C0??"
+    - "\uC5B4!! \uC18C\uD76C\uB2E4!"
+    - "\uC544 \uC18C\uD76C \uCDE8\uBF40\uD588\uAD6C\uB098... \uBD80\uB7FD\uB2E4 \u315C\u3160\n\uC77C\uB2E8
+      \uB098\uAC00\uC790!"
     persons:
     - {fileID: 0}
     - {fileID: 0}

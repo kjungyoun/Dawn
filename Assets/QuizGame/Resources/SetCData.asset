@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f611d797432e3f846885b2b12fde5f35, type: 3}
   m_Name: SetCData
   m_EditorClassIdentifier: 
-  categoryName: SET C
+  categoryName: "\uC5B4\uD559\uB2A5\uB825\uC2DC\uD5D8"
   questions:
   - questionInfo: Which is the largest living bird on Earth?
     questionType: 0
