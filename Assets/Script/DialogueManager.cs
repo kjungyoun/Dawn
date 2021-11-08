@@ -42,6 +42,15 @@ public class DialogueManager : MonoBehaviour
     public Image image; // fade 용 Image
     public string sceneName; // 전환할 scene 이름
 
+    // Getter
+    public int Count
+    {
+        get
+        {
+            return count;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {

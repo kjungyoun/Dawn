@@ -45,6 +45,12 @@ EditorBuildSettings:
     path: Assets/Scenes/PartTimeScene.unity
     guid: 5ffcfce9c829e4d5aba35d2028992196
   - enabled: 1
+    path: Assets/Scenes/AfterInterviewFailedScene.unity
+    guid: f1838e8ba404a4ec4b2af93690a2595a
+  - enabled: 1
+    path: Assets/Scenes/AfterInterviewSuccessScene.unity
+    guid: 319ad32daeacb424bb9abc4bc767ccba
+  - enabled: 1
     path: Assets/Scenes/SojuGamePlayScene.unity
     guid: f42951659137e4f47bd628bf7cda55b6
   - enabled: 1
@@ -71,9 +77,28 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 3d8b07dc8482efd4cb64099f5ec4f0f2
-    path: Assets/Scenes/DoPjtScene.unity
-    guid: 53a3864f58b80437b86b60b1d655e40f
   - enabled: 1
     path: Assets/Scenes/AfterPjtScene.unity
     guid: 9b1e0890ac6714334af3cc0be5f2f6fb
+  - enabled: 1
+    path: Assets/Scenes/AfterDishFailedScene.unity
+    guid: 9ee76ef04c17c4fb593272ab59d833be
+  - enabled: 1
+    path: Assets/Scenes/AfterDishSuccessScene.unity
+    guid: 20a70ae42c0704fe0a4cdcf54ce8ff17
+  - enabled: 1
+    path: Assets/Scenes/DishGamePlayScene.unity
+    guid: 37a0dc4030cc040eaba692117e5e3f1e
+  - enabled: 1
+    path: Assets/Scenes/DishGameStartScene.unity
+    guid: 6dc578b31e59d4637aac4b2dd6a48abe
+  - enabled: 1
+    path: Assets/Scenes/AfterCompetitionFailedScene.unity
+    guid: 6ae08a61711bb469ca38634b46f132ae
+  - enabled: 1
+    path: Assets/Scenes/DoPjtScene.unity
+    guid: 53a3864f58b80437b86b60b1d655e40f
+  - enabled: 1
+    path: Assets/Scenes/AfterCompetitionSuccessScene.unity
+    guid: 6c6281fabc12d4f009f2e2dcc5af8c8d
   m_configObjects: {}
