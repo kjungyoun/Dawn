@@ -30,6 +30,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BouncingBall/BouncingFail.unity
     guid: f95a2b2b3ccdf48fb8c933e8af2f1d87
   - enabled: 1
+    path: Assets/Scenes/BeforeInterviewScene.unity
+    guid: be58bfed1218846b5bb1469827d693a8
+  - enabled: 1
     path: Assets/Scenes/BouncingBall/BouncingSuccess.unity
     guid: 2dc729c2f9f524bf195e4d0e8cd3d6af
   - enabled: 1
