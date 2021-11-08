@@ -116,6 +116,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/AfterCompetitionSuccessScene.unity
     guid: 6c6281fabc12d4f009f2e2dcc5af8c8d
+  - enabled: 1
     path: Assets/Scenes/SojuGameOverScene.unity
     guid: 5bf62d505d6874e05b0212db675d29df
+  - enabled: 1
+    path: Assets/Scenes/SojuGameOverSceneSuccess.unity
+    guid: 28a5787bac75a4e7b838be46787bc5e2
   m_configObjects: {}
