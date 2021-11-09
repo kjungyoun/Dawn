@@ -17,9 +17,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WindowScene.unity
     guid: 762cb16a9a948478b99ff207320c1217
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/ShootingGameScene.unity
-    guid: 625cef855dac6478c9523e78a3faa49b
+    path: Assets/Scenes/ShootingGameSceneNoConflict.unity
+    guid: f8fc4124c9c12484fb8899a4d7638651
   - enabled: 1
     path: Assets/Scenes/SojuScene.unity
     guid: 793c5a1bc6425469f861cc039ecbd7fa
@@ -93,8 +96,8 @@ EditorBuildSettings:
     path: Assets/Scenes/RealFinalScene.unity
     guid: 8b4c165088febaf4f8eb3d929fd289da
   - enabled: 0
-    path: Assets/Scenes/ShootingGameScene.unity
-    guid: 625cef855dac6478c9523e78a3faa49b
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 3d8b07dc8482efd4cb64099f5ec4f0f2

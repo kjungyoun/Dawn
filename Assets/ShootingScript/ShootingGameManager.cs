@@ -249,6 +249,6 @@ public class ShootingGameManager : MonoBehaviour
 
     public void GameRetry()
     {
-        SceneManager.LoadScene(21); // 21(build setting에 있는 번)을 적어도 되고 실제 그 Scene의 이름을 적어도 해당 씬의 처음으로 넘어가게 됨.
+        SceneManager.LoadScene(4); // 21(build setting에 있는 번)을 적어도 되고 실제 그 Scene의 이름을 적어도 해당 씬의 처음으로 넘어가게 됨.
     }
 }
