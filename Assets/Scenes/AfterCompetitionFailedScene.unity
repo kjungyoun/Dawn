@@ -159,8 +159,8 @@ MonoBehaviour:
       \uC0AC\uB7EC\uAC00\uC790!! \uC774\uAC74 \uB108\uCE74\uB4DC \uD5FF\u314E\""
     - "\"\uC544.. \uC624\uB298 \uC9C4\uC9DC \uD798\uB4DC\uB124....\uC624\uB298\uBD80\uD130
       \uD480 \uBE61\uACF5\uB4E4\uC5B4\uAC04\uB2E4!!\""
-    - "\uADF8\uB798\uB3C4 \uC18C\uD76C \uB355\uBD84\uC5D0 \uC790\uACA9\uC99D\uB3C4
-      \uB538 \uC218 \uC788\uC5C8\uB358 \uAC83 \uAC19\uC544"
+    - "\uADF8\uB798\uB3C4 \uB03D(\uC774) \uB355\uBD84\uC5D0 \uC790\uACA9\uC99D\uB3C4
+      \uB538 \uC218 \uC788\uC5C8\uB358 \uAC83 \uAC19\uB2E4."
     persons:
     - {fileID: 21300000, guid: 5c9a7d98f233f488087a467c7e25cb12, type: 3}
     - {fileID: 21300000, guid: c9ca5be5964de486fb96fef2a61a7594, type: 3}

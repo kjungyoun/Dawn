@@ -433,8 +433,9 @@ MonoBehaviour:
   dialogue:
     sentences:
     - "\"\uADF8\uB798! \uD574 \uB728\uAE30 \uC804\uC774 \uAC00\uC7A5 \uC5B4\uB450\uC6B4
-      \uBC95\uC774\uB77C\uC790\uB098!!\n\uACE7 \uD574\uAC00 \uB728\uACA0\uC9C0! \uC774\uC81C
-      \uB2E4\uC2DC \uC2DC\uC791\uD574\uBCF4\uB7EC \uAC00\uC790!\""
+      \uBC95\uC774\uB77C\uC790\uB098!!\n\uACE7 \uD574\uAC00 \uB728\uACA0\uC9C0! \uB710(\uC544/\uC57C)
+      \uB10C \uD560\uC218\uC788\uB2E4!!!\n\uC774\uC81C \uB2E4\uC2DC \uC2DC\uC791\uD574\uBCF4\uB7EC
+      \uAC00\uC790!\""
     persons:
     - {fileID: 21300000, guid: d6e92ab9fd06f48b38d53012f82159ac, type: 3}
     dialogueWindows:

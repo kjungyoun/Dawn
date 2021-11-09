@@ -21,6 +21,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BeforeCafeScene.unity
     guid: 1c1894bf36d6448fd8257fe30aa577aa
   - enabled: 1
+    path: Assets/Scenes/InputNameScene.unity
+    guid: 3de2d8a8c2f2a44b0b667f28816003e9
+  - enabled: 1
     path: Assets/Scenes/ShootingGameScene.unity
     guid: 625cef855dac6478c9523e78a3faa49b
   - enabled: 1

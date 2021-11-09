@@ -736,9 +736,9 @@ MonoBehaviour:
     sentences:
     - "\"\uAE4C\uD1A1!\""
     - "... \uB204\uAD6C\uC9C0??"
-    - "\uC5B4!! \uC18C\uD76C\uB2E4!"
-    - "\uC544 \uC18C\uD76C \uCDE8\uBF40\uD588\uAD6C\uB098... \uBD80\uB7FD\uB2E4 \u315C\u3160\n\uC77C\uB2E8
-      \uB098\uAC00\uC790!"
+    - "\uC5B4!! \uB03D(\uC774)\uB2E4!"
+    - "\uC544 \uB03D(\uC774) \uCDE8\uBF40\uD588\uAD6C\uB098... \uBD80\uB7FD\uB2E4
+      \u315C\u3160\n\uC77C\uB2E8 \uB098\uAC00\uC790!"
     persons:
     - {fileID: 0}
     - {fileID: 0}
