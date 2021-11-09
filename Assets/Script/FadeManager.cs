@@ -33,7 +33,7 @@ public class FadeManager : MonoBehaviour
     IEnumerator FadeOutCoroutine(Image image)
     {
         float fadeCount = 1.0f;
-        while (fadeCount > 0) // 알파 최대값 1.0까지 반복
+        while (fadeCount > 0) // 알파 최소값 0까지 반복
         {
             fadeCount -= 0.01f;
             yield return new WaitForSeconds(0.01f); // 0.01초마다 실행

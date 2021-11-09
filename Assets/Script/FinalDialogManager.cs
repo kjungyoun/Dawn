@@ -61,6 +61,7 @@ public class FinalDialogManager : MonoBehaviour
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+        memoryAnis = new List<Animator>();
     }
 
     public void ShowDialogue(FinalDialogueCustom dialogue)
@@ -77,6 +78,7 @@ public class FinalDialogManager : MonoBehaviour
             listDialogueWindows.Add(dialogue.dialogueWindows[i]);
         }
 
+        // List에 애니메이션 추가
         for (int i = 0; i < dialogue.animations.Length; i++)
         {
             memoryAnis.Add(dialogue.animations[i]);
@@ -97,20 +99,6 @@ public class FinalDialogManager : MonoBehaviour
         aniSprite.SetBool("isAppear", false);
         aniDialogueWindow.SetBool("isAppear", false);
         talking = false;
-
-        StartCoroutine(StartFinalAni());
-    }
-
-    // 마지막 애니메이션 재생
-    IEnumerator StartFinalAni()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-      
-
-        yield return new WaitForSeconds(1.5f);
-
-      
 
         // fadeManager 선언
         fadeManager = FindObjectOfType<FadeManager>();
@@ -156,6 +144,32 @@ public class FinalDialogManager : MonoBehaviour
             // 첫 이미지일 때
             rendererDialogueWindow.GetComponent<SpriteRenderer>().sprite = listDialogueWindows[count];
             rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
+        }
+
+        if(count>1 && count < 10)
+        {
+
+            if (count == 2) // 처음 애니메이션일 때
+            {
+                memoryAnis[count - 2].SetBool("isAppear", true);
+            }
+            else
+            {
+                // 애니메이션이 달라지면
+                if (memoryAnis[count - 2] != memoryAnis[count - 3])
+                {
+                    // 회상 씬 교체
+                    memoryAnis[count - 2].SetBool("isAppear", true);
+                    yield return new WaitForSeconds(0.1f);
+                    memoryAnis[count - 3].SetBool("isAppear", false);
+                }
+            }
+            
+        }
+
+        if(count == 10) // 맨 마지막 회상 애니메이션 제거
+        {
+            memoryAnis[count - 3].SetBool("isAppear", false);
         }
 
         yield return new WaitForSeconds(0.3f);

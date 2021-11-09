@@ -524,7 +524,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: c7d362e43745d43aca09725e595bdfb7, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b12d4e560ed514340ab074ae5b432a7a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -781,7 +781,7 @@ MonoBehaviour:
   aniDialogueWindow: {fileID: 1616956861}
   talking: 0
   image: {fileID: 710475864}
-  sceneName: CafeScene
+  sceneName: BeforeCafeScene
 --- !u!1 &1814293638
 GameObject:
   m_ObjectHideFlags: 0
