@@ -4,12 +4,14 @@
 TagManager:
   serializedVersion: 2
   tags:
+  - Item
   - Border
   - BorderBullet
   - Enemy
   - PlayerBullet
   - EnemyBullet
   - Item
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -17,7 +19,9 @@ TagManager:
   - 
   - Water
   - UI
+  - Tile
   - 
+  - Tile
   - 
   - 
   - 

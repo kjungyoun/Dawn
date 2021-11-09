@@ -44,6 +44,15 @@ public class ShootingPlayer : MonoBehaviour
     public bool isButtonA;
     public bool isButtonB;
 
+
+    public int life;
+    public int score;
+
+    public ShootingGameManager shootingGameManager;
+
+    public bool isHit;
+
+
     // Animator 초기화
     SpriteRenderer spriteRenderer;
     Animator anim;

@@ -12,7 +12,11 @@ GameObject:
   - component: {fileID: 2299636587805436856}
   - component: {fileID: 6129503412233120406}
   - component: {fileID: -5085447282585609808}
+<<<<<<< HEAD
   - component: {fileID: 6337812911188909514}
+=======
+  - component: {fileID: 8577530780813452181}
+>>>>>>> 226167b37362d859f8b2e7e0e8e7987231970112
   m_Layer: 0
   m_Name: Enemy Bullet B
   m_TagString: EnemyBullet

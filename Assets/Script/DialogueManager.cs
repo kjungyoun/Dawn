@@ -42,6 +42,15 @@ public class DialogueManager : MonoBehaviour
     public Image image; // fade 용 Image
     public string sceneName; // 전환할 scene 이름
 
+    // Getter
+    public int Count
+    {
+        get
+        {
+            return count;
+        }
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -151,9 +160,9 @@ public class DialogueManager : MonoBehaviour
                     // 화면 어두워짐
                     fadeManager.FadeIn(image);
 
-                    if(!sceneName.Equals("None"))
-                    // 씬 넘어감
-                    StartCoroutine(LoadCoroutine(sceneName));
+                    if (!sceneName.Equals("None"))
+                        // 씬 넘어감
+                        StartCoroutine(LoadCoroutine(sceneName));
                 }
                 else
                 {
