@@ -5448,6 +5448,7 @@ MonoBehaviour:
   objectManager: {fileID: 1988908512}
   spawnIndex: 0
   spawnEnd: 0
+  next: AfterInterviewFailedScene
 --- !u!4 &1879957148
 Transform:
   m_ObjectHideFlags: 0
