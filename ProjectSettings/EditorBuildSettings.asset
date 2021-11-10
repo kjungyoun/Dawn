@@ -12,14 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/CellphoneScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/AlertScene.unity
+    guid: 52ed278c43b774f159254422df998288
+  - enabled: 1
     path: Assets/Scenes/DinnerScene.unity
     guid: 7d0953531ff4d4a838e185d297c400ce
   - enabled: 1
     path: Assets/Scenes/WindowScene.unity
     guid: 762cb16a9a948478b99ff207320c1217
-  - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/BeforeCafeScene.unity
     guid: 1c1894bf36d6448fd8257fe30aa577aa
@@ -29,6 +29,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ShootingGameSceneNoConflict.unity
     guid: f8fc4124c9c12484fb8899a4d7638651
+  - enabled: 1
+    path: Assets/Scenes/BeforePjtScene.unity
+    guid: 629da6f6b661d4f488f2287ea59eb50b
   - enabled: 1
     path: Assets/Scenes/SojuScene.unity
     guid: 793c5a1bc6425469f861cc039ecbd7fa
@@ -51,10 +54,10 @@ EditorBuildSettings:
     path: Assets/Scenes/BouncingBall/Intro.unity
     guid: 8c49a8ab3f3bc4bf3ba38779c038b68b
   - enabled: 0
-    path: Assets/Scenes/EndCompetitionGame.unity
+    path: 
     guid: 0a1b47bdcc6514c7594fbc1c34de88b9
   - enabled: 0
-    path: Assets/Scenes/AfterCompetitionGame.unity
+    path: 
     guid: c97c4cec4e12740a38ee8db7441bb941
   - enabled: 1
     path: Assets/Scenes/CafeScene.unity
@@ -63,7 +66,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CompetitionGameScene.unity
     guid: 954449e4a8ea74c39a23ee39da96e0cd
   - enabled: 0
-    path: Assets/Scenes/CompetitionScene.unity
+    path: 
     guid: 447836b3f249341f29156edd15dc2c69
   - enabled: 1
     path: Assets/Scenes/SojuGameScene.unity
@@ -120,7 +123,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AfterDishSuccessScene.unity
     guid: 20a70ae42c0704fe0a4cdcf54ce8ff17
   - enabled: 0
-    path: Assets/Scenes/DishGamePlayScene.unity
+    path: 
     guid: 37a0dc4030cc040eaba692117e5e3f1e
   - enabled: 1
     path: Assets/Scenes/DishGameStartScene.unity

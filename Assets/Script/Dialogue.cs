@@ -13,6 +13,6 @@ public class Dialogue
     // 대화하는 사람의 대화창
     public Sprite[] dialogueWindows;
 
-    public static string yourName;
-    public static string herName;
+    public static string yourName="동현";
+    public static string herName="소희";
 }
