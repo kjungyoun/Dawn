@@ -54,11 +54,12 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        count = 0;
         text.text = "";
+        count = 0;
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+
     }
 
     public void ShowDialogue(Dialogue dialogue)
@@ -135,7 +136,26 @@ public class DialogueManager : MonoBehaviour
         // 텍스트 출력
         for(int i = 0; i<listSentences[count].Length; i++)
         {
-            text.text += listSentences[count][i]; // 1번째 문장, 가나다라마바사 한 글자씩 출력
+            if(listSentences[count][i].Equals('뜐')) // 주인공 이름일 때
+            {
+                for(int j=0; j<Dialogue.yourName.Length; j++)
+                {
+                    text.text += Dialogue.yourName[j];
+                    yield return new WaitForSeconds(0.01f);
+                }  
+            }
+            else if (listSentences[count][i].Equals('뀽')) // 상대방 이름일 때
+            {
+                for (int j = 0; j < Dialogue.herName.Length; j++)
+                {
+                    text.text += Dialogue.herName[j];
+                    yield return new WaitForSeconds(0.01f);
+                }
+            }
+            else // 이름이 아닐 때
+            {
+                text.text += listSentences[count][i]; // 1번째 문장, 가나다라마바사 한 글자씩 출력
+            }
             yield return new WaitForSeconds(0.01f); // 출력 사이에 0.01초 딜레이 줌
         }
     }
@@ -145,29 +165,32 @@ public class DialogueManager : MonoBehaviour
     {
         if (talking)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            foreach (Touch touch in Input.touches)
             {
-                count++;
-                text.text = "";
-
-                if (count == listSentences.Count) // 마지막 대화일 때
+                if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
                 {
-                    StopAllCoroutines();
-                    ExitDialogue(); // 대화 종료
+                    count++;
+                    text.text = "";
 
-                    // fadeManager 선언
-                    fadeManager = FindObjectOfType<FadeManager>();
-                    // 화면 어두워짐
-                    fadeManager.FadeIn(image);
+                    if (count == listSentences.Count) // 마지막 대화일 때
+                    {
+                        StopAllCoroutines();
+                        ExitDialogue(); // 대화 종료
 
-                    if (!sceneName.Equals("None"))
-                        // 씬 넘어감
-                        StartCoroutine(LoadCoroutine(sceneName));
-                }
-                else
-                {
-                    StopAllCoroutines();
-                    StartCoroutine(StartDialogueCoroutine());
+                        // fadeManager 선언
+                        fadeManager = FindObjectOfType<FadeManager>();
+                        // 화면 어두워짐
+                        fadeManager.FadeIn(image);
+
+                        if (!sceneName.Equals("None"))
+                            // 씬 넘어감
+                            StartCoroutine(LoadCoroutine(sceneName));
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(StartDialogueCoroutine());
+                    }
                 }
             }
         }

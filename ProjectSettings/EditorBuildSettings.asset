@@ -17,9 +17,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/WindowScene.unity
     guid: 762cb16a9a948478b99ff207320c1217
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/ShootingGameScene.unity
-    guid: 625cef855dac6478c9523e78a3faa49b
+    path: Assets/Scenes/BeforeCafeScene.unity
+    guid: 1c1894bf36d6448fd8257fe30aa577aa
+  - enabled: 1
+    path: Assets/Scenes/InputNameScene.unity
+    guid: 3de2d8a8c2f2a44b0b667f28816003e9
+  - enabled: 1
+    path: Assets/Scenes/ShootingGameSceneNoConflict.unity
+    guid: f8fc4124c9c12484fb8899a4d7638651
   - enabled: 1
     path: Assets/Scenes/SojuScene.unity
     guid: 793c5a1bc6425469f861cc039ecbd7fa
@@ -30,6 +39,9 @@ EditorBuildSettings:
     path: Assets/Scenes/BouncingBall/BouncingFail.unity
     guid: f95a2b2b3ccdf48fb8c933e8af2f1d87
   - enabled: 1
+    path: Assets/Scenes/BeforeInterviewScene.unity
+    guid: be58bfed1218846b5bb1469827d693a8
+  - enabled: 1
     path: Assets/Scenes/BouncingBall/BouncingSuccess.unity
     guid: 2dc729c2f9f524bf195e4d0e8cd3d6af
   - enabled: 1
@@ -39,10 +51,10 @@ EditorBuildSettings:
     path: Assets/Scenes/BouncingBall/Intro.unity
     guid: 8c49a8ab3f3bc4bf3ba38779c038b68b
   - enabled: 1
-    path: Assets/Scenes/EndCompetitionGame.unity
+    path: 
     guid: 0a1b47bdcc6514c7594fbc1c34de88b9
   - enabled: 1
-    path: Assets/Scenes/AfterCompetitionGame.unity
+    path: 
     guid: c97c4cec4e12740a38ee8db7441bb941
   - enabled: 1
     path: Assets/Scenes/CafeScene.unity
@@ -51,7 +63,7 @@ EditorBuildSettings:
     path: Assets/Scenes/CompetitionGameScene.unity
     guid: 954449e4a8ea74c39a23ee39da96e0cd
   - enabled: 1
-    path: Assets/Scenes/CompetitionScene.unity
+    path: 
     guid: 447836b3f249341f29156edd15dc2c69
   - enabled: 1
     path: Assets/Scenes/SojuGameScene.unity
@@ -92,6 +104,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RealFinalScene.unity
     guid: 8b4c165088febaf4f8eb3d929fd289da
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/CreditScene.unity
     guid: 3d8b07dc8482efd4cb64099f5ec4f0f2
@@ -105,7 +120,7 @@ EditorBuildSettings:
     path: Assets/Scenes/AfterDishSuccessScene.unity
     guid: 20a70ae42c0704fe0a4cdcf54ce8ff17
   - enabled: 1
-    path: Assets/Scenes/DishGamePlayScene.unity
+    path: 
     guid: 37a0dc4030cc040eaba692117e5e3f1e
   - enabled: 1
     path: Assets/Scenes/DishGameStartScene.unity

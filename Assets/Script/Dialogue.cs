@@ -12,4 +12,7 @@ public class Dialogue
     public Sprite[] persons;
     // 대화하는 사람의 대화창
     public Sprite[] dialogueWindows;
+
+    public static string yourName;
+    public static string herName;
 }

@@ -61,6 +61,7 @@ public class FinalDialogManager : MonoBehaviour
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+        memoryAnis = new List<Animator>();
     }
 
     public void ShowDialogue(FinalDialogueCustom dialogue)
@@ -77,6 +78,7 @@ public class FinalDialogManager : MonoBehaviour
             listDialogueWindows.Add(dialogue.dialogueWindows[i]);
         }
 
+        // List에 애니메이션 추가
         for (int i = 0; i < dialogue.animations.Length; i++)
         {
             memoryAnis.Add(dialogue.animations[i]);
@@ -97,20 +99,6 @@ public class FinalDialogManager : MonoBehaviour
         aniSprite.SetBool("isAppear", false);
         aniDialogueWindow.SetBool("isAppear", false);
         talking = false;
-
-        StartCoroutine(StartFinalAni());
-    }
-
-    // 마지막 애니메이션 재생
-    IEnumerator StartFinalAni()
-    {
-        yield return new WaitForSeconds(0.3f);
-
-      
-
-        yield return new WaitForSeconds(1.5f);
-
-      
 
         // fadeManager 선언
         fadeManager = FindObjectOfType<FadeManager>();
@@ -158,12 +146,57 @@ public class FinalDialogManager : MonoBehaviour
             rendererSprite.GetComponent<SpriteRenderer>().sprite = listSprites[count];
         }
 
+        if(count>1 && count < 10)
+        {
+
+            if (count == 2) // 처음 애니메이션일 때
+            {
+                memoryAnis[count - 2].SetBool("isAppear", true);
+            }
+            else
+            {
+                // 애니메이션이 달라지면
+                if (memoryAnis[count - 2] != memoryAnis[count - 3])
+                {
+                    // 회상 씬 교체
+                    memoryAnis[count - 2].SetBool("isAppear", true);
+                    yield return new WaitForSeconds(0.1f);
+                    memoryAnis[count - 3].SetBool("isAppear", false);
+                }
+            }
+            
+        }
+
+        if(count == 10) // 맨 마지막 회상 애니메이션 제거
+        {
+            memoryAnis[count - 3].SetBool("isAppear", false);
+        }
+
         yield return new WaitForSeconds(0.3f);
 
         // 텍스트 출력
         for (int i = 0; i < listSentences[count].Length; i++)
         {
-            text.text += listSentences[count][i]; // 1번째 문장, 가나다라마바사 한 글자씩 출력
+            if (listSentences[count][i].Equals('뜐')) // 주인공 이름일 때
+            {
+                for (int j = 0; j < Dialogue.yourName.Length; j++)
+                {
+                    text.text += Dialogue.yourName[j];
+                    yield return new WaitForSeconds(0.01f);
+                }
+            }
+            else if (listSentences[count][i].Equals('뀽')) // 상대방 이름일 때
+            {
+                for (int j = 0; j < Dialogue.herName.Length; j++)
+                {
+                    text.text += Dialogue.herName[j];
+                    yield return new WaitForSeconds(0.01f);
+                }
+            }
+            else // 이름이 아닐 때
+            {
+                text.text += listSentences[count][i]; // 1번째 문장, 가나다라마바사 한 글자씩 출력
+            }
             yield return new WaitForSeconds(0.01f); // 출력 사이에 0.01초 딜레이 줌
         }
     }
