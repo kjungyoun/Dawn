@@ -157,12 +157,13 @@ MonoBehaviour:
   enemyName: B
   speed: 1.5
   enemyScore: 5000
-  health: 3000
+  health: 10
   sprites: []
   bulletObjA: {fileID: 0}
   bulletObjB: {fileID: 0}
   player: {fileID: 0}
   objectManager: {fileID: 0}
+  gameManager: {fileID: 0}
   itemCoin: {fileID: 0}
   itemPower: {fileID: 0}
   itemBoom: {fileID: 0}
