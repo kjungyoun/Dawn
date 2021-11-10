@@ -65,8 +65,6 @@ public class GoHomeDialogManager: MonoBehaviour
 
     public void ShowDialogue(Dialogue dialogue)
     {
-        talking = true;
-
         for (int i = 0; i < dialogue.sentences.Length; i++)
         {
             // ListSenctences에 dialogue에 있는 모든 sentence 추가
@@ -122,6 +120,7 @@ public class GoHomeDialogManager: MonoBehaviour
 
     IEnumerator StartDialogueCoroutine()
     {
+        talking = true;
         if (count > 0)
         {
             // 대화창 교체 (사람이 달라질 때)
@@ -185,12 +184,13 @@ public class GoHomeDialogManager: MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f); // 출력 사이에 0.01초 딜레이 줌
         }
+        talking = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (talking)
+        if (!talking)
         {
             foreach (Touch touch in Input.touches)
             {
@@ -213,7 +213,7 @@ public class GoHomeDialogManager: MonoBehaviour
             }
         }
 #if UNITY_EDITOR
-        if (talking)
+        if (!talking)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
