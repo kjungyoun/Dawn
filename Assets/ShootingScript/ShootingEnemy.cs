@@ -101,7 +101,7 @@ public class ShootingEnemy : MonoBehaviour
         switch(enemyName)
         {
             case "B":
-                health = 2000;
+                health = 10;
                 Invoke("Stop", 2f);
                 break;
             case "L":

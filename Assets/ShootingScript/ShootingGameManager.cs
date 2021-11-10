@@ -28,12 +28,14 @@ public class ShootingGameManager : MonoBehaviour
     public Image[] lifeImage;
     public Image[] boomImage;
     public GameObject gameOverSet;
+    public GameObject gameSuccessSet;
     public ShootingObjectManager objectManager;
 
     public List<ShootingSpawn> spawnList;
     public int spawnIndex;
     public bool spawnEnd;
     public string next;
+    public string nextSusccess;
 
     void Awake()
     {
@@ -78,8 +80,8 @@ public class ShootingGameManager : MonoBehaviour
     {
         // Stage UI load
         stageAnim.SetTrigger("On");
-        stageAnim.GetComponent<Text>().text = "Stage " + stage + "\nStart!!";
-        clearAnim.GetComponent<Text>().text = "Stage " + stage + "\nClear!!";
+        stageAnim.GetComponent<Text>().text = "Stage " + stage.ToString() + "\nStart!!";
+        clearAnim.GetComponent<Text>().text = "Stage " + stage.ToString() + "\nClear!!";
         // Enemy Spawn File Read
         ReadSPawnFile();
 
@@ -100,16 +102,7 @@ public class ShootingGameManager : MonoBehaviour
         player.transform.position = playerPos.position;
 
         // Stage Increment
-        stage++;
-        if(stage > 2)
-        {
-            Invoke("GameOver", 2);
-        }
-        else
-        {
-            Invoke("StageStart", 5);
-        }
-
+        Invoke("GameSuccess", 2);
     }
 
     // 시간을 계속 확인하면서 max 시간이 넘었을 때 몬스터 리젠한다.
@@ -251,5 +244,15 @@ public class ShootingGameManager : MonoBehaviour
     public void GameRetry()
     {
         SceneManager.LoadScene(next); // 21(build setting에 있는 번)을 적어도 되고 실제 그 Scene의 이름을 적어도 해당 씬의 처음으로 넘어가게 됨.
+    }
+
+    public void GameSuccess()
+    {
+        gameSuccessSet.SetActive(true);
+    }
+
+    public void GameNext()
+    {
+        SceneManager.LoadScene(nextSusccess); // 21(build setting에 있는 번)을 적어도 되고 실제 그 Scene의 이름을 적어도 해당 씬의 처음으로 넘어가게 됨.
     }
 }
