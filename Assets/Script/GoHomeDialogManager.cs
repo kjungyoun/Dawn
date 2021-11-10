@@ -192,6 +192,29 @@ public class GoHomeDialogManager: MonoBehaviour
     {
         if (talking)
         {
+            foreach (Touch touch in Input.touches)
+            {
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    count++;
+                    text.text = "";
+
+                    if (count == listSentences.Count) // 마지막 대화일 때
+                    {
+                        StopAllCoroutines();
+                        ExitDialogue(); // 대화 종료
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(StartDialogueCoroutine());
+                    }
+                }
+            }
+        }
+#if UNITY_EDITOR
+        if (talking)
+        {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 count++;
@@ -209,6 +232,7 @@ public class GoHomeDialogManager: MonoBehaviour
                 }
             }
         }
+#endif
     }
 
     IEnumerator LoadCoroutine(string sceneName)

@@ -90,6 +90,9 @@ public class CellphoneAniManager : MonoBehaviour
         aniSprite.SetBool("isAppear", false);
         aniDialogueWindow.SetBool("isAppear", false);
         talking = false;
+        fadeManager = FindObjectOfType<FadeManager>();
+        fadeManager.FadeIn(image);
+        StartCoroutine(LoadCoroutine(sceneName));
     }
 
     IEnumerator StartDialogueCoroutine()
@@ -169,6 +172,29 @@ public class CellphoneAniManager : MonoBehaviour
     {
         if (talking)
         {
+            foreach (Touch touch in Input.touches)
+            {
+                if (touch.phase == TouchPhase.Ended)
+                {
+                    count++;
+                    text.text = "";
+
+                    if (count == listSentences.Count) // 마지막 대화일 때
+                    {
+                        StopAllCoroutines();
+                        ExitDialogue(); // 대화 종료
+                    }
+                    else
+                    {
+                        StopAllCoroutines();
+                        StartCoroutine(StartDialogueCoroutine());
+                    }
+                }
+            }
+        }
+#if UNITY_EDITOR
+        if (talking)
+        {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 count++;
@@ -178,15 +204,6 @@ public class CellphoneAniManager : MonoBehaviour
                 {
                     StopAllCoroutines();
                     ExitDialogue(); // 대화 종료
-
-                    // fadeManager 선언
-                    fadeManager = FindObjectOfType<FadeManager>();
-                    // 화면 어두워짐
-                    fadeManager.FadeIn(image);
-
-                    if (!sceneName.Equals("None"))
-                        // 씬 넘어감
-                        StartCoroutine(LoadCoroutine(sceneName));
                 }
                 else
                 {
@@ -195,6 +212,7 @@ public class CellphoneAniManager : MonoBehaviour
                 }
             }
         }
+#endif
     }
 
     IEnumerator LoadCoroutine(string sceneName)

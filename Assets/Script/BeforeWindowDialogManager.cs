@@ -90,6 +90,9 @@ public class BeforeWindowDialogManager : MonoBehaviour
         aniSprite.SetBool("isAppear", false);
         aniDialogueWindow.SetBool("isAppear", false);
         talking = false;
+        fadeManager = FindObjectOfType<FadeManager>();
+        fadeManager.FadeIn(image);
+        StartCoroutine(LoadCoroutine(sceneName));
     }
 
     IEnumerator StartDialogueCoroutine()
@@ -152,7 +155,7 @@ public class BeforeWindowDialogManager : MonoBehaviour
         {
             foreach (Touch touch in Input.touches)
             {
-                if (touch.phase != TouchPhase.Ended && touch.phase != TouchPhase.Canceled)
+                if (touch.phase == TouchPhase.Ended)
                 {
                     count++;
                     text.text = "";
@@ -161,15 +164,6 @@ public class BeforeWindowDialogManager : MonoBehaviour
                     {
                         StopAllCoroutines();
                         ExitDialogue(); // 대화 종료
-
-                        // fadeManager 선언
-                        fadeManager = FindObjectOfType<FadeManager>();
-                        // 화면 어두워짐
-                        fadeManager.FadeIn(image);
-
-                        if (!sceneName.Equals("None"))
-                            // 씬 넘어감
-                            StartCoroutine(LoadCoroutine(sceneName));
                     }
                     else
                     {
@@ -179,6 +173,27 @@ public class BeforeWindowDialogManager : MonoBehaviour
                 }
             }
         }
+#if UNITY_EDITOR
+        if (talking)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                count++;
+                text.text = "";
+
+                if (count == listSentences.Count) // 마지막 대화일 때
+                {
+                    StopAllCoroutines();
+                    ExitDialogue(); // 대화 종료
+                }
+                else
+                {
+                    StopAllCoroutines();
+                    StartCoroutine(StartDialogueCoroutine());
+                }
+            }
+        }
+#endif
     }
 
     IEnumerator LoadCoroutine(string sceneName)
