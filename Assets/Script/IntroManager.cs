@@ -24,6 +24,6 @@ public class IntroManager : MonoBehaviour
 
     public void GoGameScene()
     {
-        SceneManager.LoadScene("BeforeWindowScene");
+        SceneManager.LoadScene("InputNameScene");
     }
 }

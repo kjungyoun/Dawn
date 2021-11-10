@@ -33,6 +33,7 @@ public class ShootingGameManager : MonoBehaviour
     public List<ShootingSpawn> spawnList;
     public int spawnIndex;
     public bool spawnEnd;
+    public string next;
 
     void Awake()
     {
@@ -249,6 +250,6 @@ public class ShootingGameManager : MonoBehaviour
 
     public void GameRetry()
     {
-        SceneManager.LoadScene(4); // 21(build setting에 있는 번)을 적어도 되고 실제 그 Scene의 이름을 적어도 해당 씬의 처음으로 넘어가게 됨.
+        SceneManager.LoadScene(next); // 21(build setting에 있는 번)을 적어도 되고 실제 그 Scene의 이름을 적어도 해당 씬의 처음으로 넘어가게 됨.
     }
 }
