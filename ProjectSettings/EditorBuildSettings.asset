@@ -47,12 +47,21 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BouncingBall/Intro.unity
     guid: 8c49a8ab3f3bc4bf3ba38779c038b68b
+  - enabled: 0
+    path: Assets/Scenes/EndCompetitionGame.unity
+    guid: 0a1b47bdcc6514c7594fbc1c34de88b9
+  - enabled: 0
+    path: Assets/Scenes/AfterCompetitionGame.unity
+    guid: c97c4cec4e12740a38ee8db7441bb941
   - enabled: 1
     path: Assets/Scenes/CafeScene.unity
     guid: 3e96f9c4f4914436095f73c4b2cc8c09
   - enabled: 1
     path: Assets/Scenes/CompetitionGameScene.unity
     guid: 954449e4a8ea74c39a23ee39da96e0cd
+  - enabled: 0
+    path: Assets/Scenes/CompetitionScene.unity
+    guid: 447836b3f249341f29156edd15dc2c69
   - enabled: 1
     path: Assets/Scenes/SojuGameScene.unity
     guid: 5cb9dabb8647141878cf8ddb03b63b19
@@ -108,8 +117,8 @@ EditorBuildSettings:
     path: Assets/Scenes/AfterDishSuccessScene.unity
     guid: 20a70ae42c0704fe0a4cdcf54ce8ff17
   - enabled: 0
-    path: 
-    guid: 00000000000000000000000000000000
+    path: Assets/Scenes/DishGamePlayScene.unity
+    guid: 37a0dc4030cc040eaba692117e5e3f1e
   - enabled: 1
     path: Assets/Scenes/DishGameStartScene.unity
     guid: 6dc578b31e59d4637aac4b2dd6a48abe

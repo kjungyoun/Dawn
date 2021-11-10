@@ -14,159 +14,58 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   categoryName: "\uC5B4\uD559\uB2A5\uB825\uC2DC\uD5D8"
   questions:
-  - questionInfo: Which is the largest living bird on Earth?
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Emu
-    - Ostrich
-    - Albatross
-    - Siberian Crane
-    correctAns: Ostrich
-  - questionInfo: For how many years have the dinosaurs been extinct?
+  - questionInfo: "90\uB3C4"
     questionType: 1
-    questionImage: {fileID: 0}
+    questionImage: {fileID: 21300000, guid: 29ed78a49b07c5e458727853b65ecd7a, type: 3}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - About 25 million years
-    - About 65 milion years
-    - About 100 million years
-    - About 135 million years
-    correctAns: About 65 milion years
-  - questionInfo: Quess the animal?
+    - "\uBE44\uC11C"
+    - "\uCE5C\uD55C \uBE44\uBE54\uBC25\uAC00\uAC8C \uC0AC\uC7A5"
+    - "\uCE5C\uD55C \uACE0\uAE43\uC9D1 \uC8FC\uC778"
+    - "\uC544\uB0B4"
+    correctAns: "\uCE5C\uD55C \uBE44\uBE54\uBC25\uAC00\uAC8C \uC0AC\uC7A5"
+  - questionInfo: "\uC2E4\uC81C\uC2DC\uC810"
     questionType: 1
-    questionImage: {fileID: 21300000, guid: c0bb50585e74c4e42afe23172c92e36f, type: 3}
+    questionImage: {fileID: 21300000, guid: 3e7206cc5b8cbd64d9f0b6a51449a893, type: 3}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Monkey
-    - Shark
-    - Porcupine
-    - Elephant
-    correctAns: Elephant
-  - questionInfo: Which amongst the following is the largest mammal?
+    - "\uD1A0\uC694\uC77C"
+    - "\uC77C\uC694\uC77C"
+    - "\uC6D4\uC694\uC77C"
+    - "\uD654\uC694\uC77C"
+    correctAns: "\uC77C\uC694\uC77C"
+  - questionInfo: Man or Woman?
     questionType: 1
-    questionImage: {fileID: 0}
+    questionImage: {fileID: 21300000, guid: e815a797fd13d6247abb039a274586de, type: 3}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Elephant
-    - Whale
-    - Dinosaur
-    - Rhinoceros
-    correctAns: Whale
-  - questionInfo: Which part becomes modified as the tusk of elephant?
+    - "\uAC70\uC9D3\uB9D0"
+    - "\uC6B0\uB9AC"
+    - "\uD560\uC544\uBC84\uC9C0"
+    - "\uC190\uB140"
+    correctAns: "\uD560\uC544\uBC84\uC9C0"
+  - questionInfo: "\uB0B4\uAC00 \uC544\uB294 \uC0AC\uB78C"
     questionType: 1
-    questionImage: {fileID: 0}
+    questionImage: {fileID: 21300000, guid: 62623d21bba841b41a5baad9f8cebc5f, type: 3}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Canine
-    - Premolar
-    - Second Incisor
-    - Molar
-    correctAns: Second Incisor
-  - questionInfo: Which of the following are warm-blooded animals?
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Whales
-    - Whale sharks
-    - Alytes
-    - Draco
-    correctAns: Whales
-  - questionInfo: Quess the animal?
+    - "\uCD5C\uADFC \uC774\uC0AC \uC628 \uB300\uD559\uC0DD"
+    - "\uB2E8\uACE8 \uBD84\uC2DD\uC9D1 \uC8FC\uC778"
+    - "\uCE5C\uD55C \uBD80\uB140\uD68C\uC7A5"
+    - "\uACBD\uBE44 \uC544\uC800\uC528"
+    correctAns: "\uCD5C\uADFC \uC774\uC0AC \uC628 \uB300\uD559\uC0DD"
+  - questionInfo: "\uC870\uC0AC"
     questionType: 1
-    questionImage: {fileID: 21300000, guid: 5d00affa1ba994440b82b4f1c20c72fb, type: 3}
+    questionImage: {fileID: 21300000, guid: 1e123c015dff2ef45820338b6a699bf3, type: 3}
     audioClip: {fileID: 0}
     videoClip: {fileID: 0}
     options:
-    - Rabbit
-    - Spider
-    - Polar Bear
-    - Cheeta
-    correctAns: Rabbit
-  - questionInfo: Which phenomenon do bats or dolphins use to find prey, predators
-      or obstacles?
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Refraction of sound
-    - Formation of beats
-    - Scattering
-    - Echo location
-    correctAns: Echo location
-  - questionInfo: Which of the following is the smallest bird?
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Pigeon
-    - Parrot
-    - Humming bird
-    - House sparrow
-    correctAns: Humming bird
-  - questionInfo: Which one among the following lays eggs and does not produce young
-      ones directly?
-    questionType: 0
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Echidna
-    - Kangaroo
-    - Porcupine
-    - Whale
-    correctAns: Echidna
-  - questionInfo: Quess the animal?
-    questionType: 1
-    questionImage: {fileID: 21300000, guid: 7a07241ec9d50c14583bf87319426eb2, type: 3}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 0}
-    options:
-    - Lion
-    - Panda
-    - Tiger
-    - Whale
-    correctAns: Tiger
-  - questionInfo: Quess the animal?
-    questionType: 3
-    questionImage: {fileID: 21300000, guid: 7a07241ec9d50c14583bf87319426eb2, type: 3}
-    audioClip: {fileID: 0}
-    videoClip: {fileID: 32900000, guid: 532166cfd4456b040bf2f9d173ceb58c, type: 3}
-    options:
-    - Dog
-    - Cat
-    - Monkey
-    - Whale
-    correctAns: Cat
-  - questionInfo: Quess the animal?
-    questionType: 2
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: e2e9865d907fe4b4db6b70550ccee95a, type: 3}
-    videoClip: {fileID: 0}
-    options:
-    - Dog
-    - Elephant
-    - Pig
-    - Snake
-    correctAns: Pig
-  - questionInfo: Quess the animal?
-    questionType: 2
-    questionImage: {fileID: 0}
-    audioClip: {fileID: 8300000, guid: 01f1b7bf136bb2e4491ff216fad6d684, type: 3}
-    videoClip: {fileID: 0}
-    options:
-    - Kangaroo
-    - Wolf
-    - Dolphine
-    - Frog
-    correctAns: Wolf
+    - "\uC774"
+    - "\uC704"
+    - "\uC5D0\uC11C"
+    - "\uC758"
+    correctAns: "\uC774"
