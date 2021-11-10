@@ -17,7 +17,7 @@ public class QuizGameUI : MonoBehaviour
     [SerializeField] private Image questionImg;                     
     [SerializeField] private UnityEngine.Video.VideoPlayer questionVideo;   
     [SerializeField] private AudioSource questionAudio;             
-    [SerializeField] private Text questionInfoText;                 
+    [SerializeField] private Text questionInfoText;
     [SerializeField] private List<Button> options;                  
 #pragma warning restore 649
 
@@ -82,6 +82,7 @@ public class QuizGameUI : MonoBehaviour
         }
 
         questionInfoText.text = question.questionInfo;                      //set the question text
+        questionInfoText.transform.gameObject.SetActive(false);
 
         // 보기 shuffle
         List<string> ansOptions = ShuffleList.ShuffleListItems<string>(question.options);
@@ -101,7 +102,7 @@ public class QuizGameUI : MonoBehaviour
 
     public void ReduceLife(int remainingLife)
     {
-        lifeImageList[remainingLife].color = Color.red;
+        lifeImageList[remainingLife].color = Color.black;
     }
 
     IEnumerator PlayAudio()
