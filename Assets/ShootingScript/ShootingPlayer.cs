@@ -183,8 +183,8 @@ public class ShootingPlayer : MonoBehaviour
                 GameObject bulletR = objectManager.MakeObj("BulletPlayerA");
                 GameObject bulletL = objectManager.MakeObj("BulletPlayerA");
                 
-                bulletR.transform.position = transform.position + Vector3.right * 0.3f;
-                bulletL.transform.position = transform.position + Vector3.left * 0.3f; ;
+                bulletR.transform.position = transform.position + Vector3.right * 0.4f;
+                bulletL.transform.position = transform.position + Vector3.left * 0.4f;
                 
                 Rigidbody2D rigidR = bulletR.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidL = bulletL.GetComponent<Rigidbody2D>();
@@ -197,9 +197,9 @@ public class ShootingPlayer : MonoBehaviour
                 GameObject bulletCC = objectManager.MakeObj("BulletPlayerB");
                 GameObject bulletLL = objectManager.MakeObj("BulletPlayerA");
 
-                bulletRR.transform.position = transform.position + Vector3.right * 0.35f;
+                bulletRR.transform.position = transform.position + Vector3.right * 0.5f;
                 bulletCC.transform.position = transform.position;
-                bulletLL.transform.position = transform.position + Vector3.left * 0.35f;
+                bulletLL.transform.position = transform.position + Vector3.left * 0.5f;
 
                 Rigidbody2D rigidRR = bulletRR.GetComponent<Rigidbody2D>();
                 Rigidbody2D rigidCC = bulletCC.GetComponent<Rigidbody2D>();

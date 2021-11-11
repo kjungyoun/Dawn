@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4858640235873641747}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4729, y: 0.4606, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -8421458170528590454, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 54b405ded0a3b45b79b35ca09555881e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 1.8
 --- !u!50 &4858640235873641773
 Rigidbody2D:
   serializedVersion: 4
@@ -135,12 +135,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyName: L
-  speed: 3
+  speed: 1
   enemyScore: 100
   health: 50
   sprites:
-  - {fileID: -8421458170528590454, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
-  - {fileID: 3714015224569861163, guid: 138040323294fd440a3a823e5d70ad01, type: 3}
+  - {fileID: 21300000, guid: 54b405ded0a3b45b79b35ca09555881e, type: 3}
+  - {fileID: 21300000, guid: 1d82f64adf011407aa63d38fe3f7f375, type: 3}
   bulletObjA: {fileID: 1960723104440329075, guid: 865615f8c872941d2a32f4b9589718f1, type: 3}
   bulletObjB: {fileID: 1960723104440329075, guid: 2535498ed3c4940b3b5b2c3486a89bc6, type: 3}
   player: {fileID: 0}
@@ -152,5 +152,5 @@ MonoBehaviour:
   patternIndex: 0
   curPatternCount: 0
   maxPatternCount: 
-  maxShotDelay: 2
+  maxShotDelay: 1
   curShotDelay: 0
