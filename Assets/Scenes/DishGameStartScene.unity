@@ -271,7 +271,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1988064191}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MiniGameManager, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
@@ -479,7 +479,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1988064191}
-        m_TargetAssemblyTypeName: MiniGameManager, Assembly-CSharp
+        m_TargetAssemblyTypeName: DishGameManager, Assembly-CSharp
         m_MethodName: NextScene
         m_Mode: 1
         m_Arguments:
@@ -900,7 +900,7 @@ GameObject:
   - component: {fileID: 1988064192}
   - component: {fileID: 1988064191}
   m_Layer: 0
-  m_Name: MiniGameManager
+  m_Name: DishGameManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -915,11 +915,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1988064190}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bf5f16f000e914653b8a2dd402035519, type: 3}
+  m_Script: {fileID: 11500000, guid: fa79583e67c81410d99048cef2b3c0a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Anigame: {fileID: 1762618807}
-  next: Intro
 --- !u!4 &1988064192
 Transform:
   m_ObjectHideFlags: 0
