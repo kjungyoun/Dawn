@@ -101,17 +101,17 @@ public class ShootingEnemy : MonoBehaviour
         switch(enemyName)
         {
             case "B":
-                health = 10;
+                health = 3000;
                 Invoke("Stop", 2f);
                 break;
             case "L":
-                health = 10;
+                health = 30;
                 break;
             case "M":
-                health = 10;
+                health = 15;
                 break;
             case "S":
-                health = 1;
+                health = 5;
                 break;
         }
     }
@@ -163,9 +163,9 @@ public class ShootingEnemy : MonoBehaviour
         GameObject bulletL = objectManager.MakeObj("BulletBossA");
         bulletL.transform.position = transform.position + Vector3.left * 0.3f;
         GameObject bulletRR = objectManager.MakeObj("BulletBossA");
-        bulletRR.transform.position = transform.position + Vector3.right * 0.45f;
+        bulletRR.transform.position = transform.position + Vector3.right * 0.8f;
         GameObject bulletLL = objectManager.MakeObj("BulletBossA");
-        bulletLL.transform.position = transform.position + Vector3.left * 0.45f;
+        bulletLL.transform.position = transform.position + Vector3.left * 0.8f;
 
 
         Rigidbody2D rigidR = bulletR.GetComponent<Rigidbody2D>();
@@ -200,7 +200,7 @@ public class ShootingEnemy : MonoBehaviour
             bullet.transform.position = transform.position;
             Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
             Vector2 dirVec = player.transform.position - transform.position;
-            Vector2 ranVec = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(0f, 2f));
+            Vector2 ranVec = new Vector2(Random.Range(-7f, 7f), Random.Range(0f, 2f));
             dirVec += ranVec;
             rigid.AddForce(dirVec.normalized * 5, ForceMode2D.Impulse);
         }
@@ -224,8 +224,8 @@ public class ShootingEnemy : MonoBehaviour
         bullet.transform.rotation = Quaternion.identity;
 
         Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
-        Vector2 dirVec = new Vector2(Mathf.Cos(Mathf.PI * 20 * (curPatternCount)/maxPatternCount[patternIndex]), -1);
-        rigid.AddForce(dirVec.normalized * 5, ForceMode2D.Impulse);
+        Vector2 dirVec = new Vector2(Mathf.Cos(Mathf.PI * 3 * (curPatternCount)/maxPatternCount[patternIndex]), -1);
+        rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
 
         curPatternCount++;
 
@@ -243,8 +243,8 @@ public class ShootingEnemy : MonoBehaviour
     {
         if (health <= 0)
             return;
-        int roundNumA = 40;
-        int roundNumB = 35;
+        int roundNumA = 15;
+        int roundNumB = 14;
         int roundNum = curPatternCount % 2 == 0 ? roundNumA : roundNumB;
         for (int index=0; index < roundNum; index++)
         {
@@ -280,7 +280,8 @@ public class ShootingEnemy : MonoBehaviour
         health -= dmg;
         if(enemyName == "B")
         {
-            anim.SetTrigger("OnHit");
+            spriteRenderer.sprite = sprites[1];
+            Invoke("ReturnSprite", 0.5f);
         }
         else
         {
@@ -295,16 +296,16 @@ public class ShootingEnemy : MonoBehaviour
 
             // Random Ratio Item Drop
             int ran = enemyName == "B" ? 0 : Random.Range(0, 10);
-            if( ran <= 5)
+            if( ran <= 1)
             {
                 Debug.Log("Not Item");
             }
-            else if(ran < 7) // Coin
+            else if(ran < 2) // Coin
             {
                 GameObject itemCoin = objectManager.MakeObj("ItemCoin");
                 itemCoin.transform.position = transform.position;
             }
-            else if(ran < 9) // boom
+            else if(ran < 3) // boom
             {
                 GameObject itemBoom = objectManager.MakeObj("ItemBoom");
                 itemBoom.transform.position = transform.position;
