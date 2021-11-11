@@ -22,7 +22,7 @@ public class AudioPlayPart : MonoBehaviour
         musicpart = gameObject;
         audioSource = GetComponent<AudioSource>();
 
-        if(SceneManager.GetActiveScene().name == "Intro")
+        if(SceneManager.GetActiveScene().name == "Stage")
         {
             Destroy(musicpart);
         }
