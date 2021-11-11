@@ -6,6 +6,8 @@ using System.IO;
 public class DishGameManager : MonoBehaviour
 {
     public Animator Anigame;
+    public GameObject guidePanel;
+
     public void NextScene()
     {
 
@@ -23,5 +25,15 @@ public class DishGameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.9f);
         SceneLoader.LoadScene("Stage");
+    }
+
+    public void ShowGuide()
+    {
+        guidePanel.SetActive(true);
+    }
+
+    public void CloseGuide()
+    {
+        guidePanel.SetActive(false);
     }
 }
