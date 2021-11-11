@@ -13,6 +13,8 @@ public class PacManPlayerController : MonoBehaviour
     private int sojuNum = 62;
     [SerializeField]
     private Image[] lifeImages;
+    [SerializeField]
+    private Text sojuCoin;
 
     private AroundWrap aroundWrap;
     private PacManMovementScript pacManMovementScript;
@@ -21,6 +23,8 @@ public class PacManPlayerController : MonoBehaviour
     private FadeManager fadeManager;
     public Image image; // fade 용 Image
     public string sceneName; // 전환할 scene 이름
+
+
 
     [SerializeField]
     private VirtualJoystick virtualJoystick;
@@ -34,6 +38,8 @@ public class PacManPlayerController : MonoBehaviour
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
+
+
     private void Update()
     {
         int a = virtualJoystick.getDirection();
@@ -42,21 +48,25 @@ public class PacManPlayerController : MonoBehaviour
         {
             moveDirection = Vector2.up;
             direction = Direction.Up;
+            Debug.Log("up");
         }
         else if (a == 2)
         {
             moveDirection = Vector2.left;
             direction = Direction.Left;
+            Debug.Log("Left");
         }
         else if (a == 3)
         {
             moveDirection = Vector2.right;
             direction = Direction.Right;
+            Debug.Log("right");
         }
         else if (a == 1)
         {
             moveDirection = Vector2.down;
             direction = Direction.Down;
+            Debug.Log("down");
         }
 
         // 2. 이동 방향에 광선 발사 (장애물 검사)
@@ -83,6 +93,7 @@ public class PacManPlayerController : MonoBehaviour
         {
             // 아이템 획득 처리 (현재는 아이템을 파괴하기만 한다)
             sojuNum -= 1;
+            sojuCoin.text = sojuNum.ToString();
             Destroy(collision.gameObject);
 
             if(sojuNum == 0)
