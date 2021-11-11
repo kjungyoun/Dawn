@@ -2,93 +2,79 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class VirtualJoystick : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
+public class VirtualJoystick : MonoBehaviour
 {
     private Image imageBackground;
-    private Image imageController;
     private Vector2 touchPosition;
+    private Button upBtn;
+    private Button downBtn;
+    private Button leftBtn;
+    private Button rightBtn;
+
+    private bool up = false;
+    private bool down = false;
+    private bool left = false;
+    private bool right = false;
 
     private void Awake()
     {
         imageBackground = GetComponent<Image>();
-        imageController = transform.GetChild(0).GetComponent<Image>();
+        upBtn = transform.GetChild(0).GetComponent<Button>();
+        downBtn = transform.GetChild(1).GetComponent<Button>();
+        leftBtn = transform.GetChild(2).GetComponent<Button>();
+        rightBtn = transform.GetChild(3).GetComponent<Button>();
+        
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void GoUp()
     {
-        touchPosition = Vector2.zero;
-
-        if (RectTransformUtility.ScreenPointToLocalPointInRectangle(
-            imageBackground.rectTransform, eventData.position, eventData.pressEventCamera, out touchPosition))
-        {
-            touchPosition.x = (touchPosition.x / imageBackground.rectTransform.sizeDelta.x);
-            touchPosition.y = (touchPosition.y / imageBackground.rectTransform.sizeDelta.y);
-
-            touchPosition = new Vector2(touchPosition.x * 2 - 1, touchPosition.y * 2 - 1);
-
-            touchPosition = (touchPosition.magnitude > 1) ? touchPosition.normalized : touchPosition;
-
-            imageController.rectTransform.anchoredPosition = new Vector2(
-                touchPosition.x * imageBackground.rectTransform.sizeDelta.x / 4,
-                touchPosition.y * imageBackground.rectTransform.sizeDelta.y / 4);
-        }
+        up = true;
+        down = false;
+        left = false;
+        right = false;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
+    public void GoDown()
     {
+        up = false;
+        down = true;
+        left = false;
+        right = false;
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    public void goLeft()
     {
-        imageController.rectTransform.anchoredPosition = Vector2.zero;
-        touchPosition = Vector2.zero;
+        up = false;
+        down = false;
+        left = true;
+        right = false;
     }
 
-    public float Horizontal()
+    public void goRight()
     {
-        return touchPosition.x;
-    }
-
-    public float Vertical()
-    {
-        return touchPosition.y;
+        up = false;
+        down = false;
+        left = false;
+        right = true;
     }
 
     public int getDirection()
     {
-        if (touchPosition == Vector2.zero)
+        if (up)
         {
-            return -1;
+            return 0;
         }
-        else
+        else if (down)
         {
-            if (touchPosition.x <= 0.5 && touchPosition.x >= -0.5)
-            {
-                if (touchPosition.y >= 0)
-                {
-                    Debug.Log("up");
-                    return 0;
-                }
-                else
-                {
-                    Debug.Log("Down");
-                    return 1;
-                }
-            }
-
-            if (touchPosition.y <= 0.5 && touchPosition.y >= -0.5)
-            {
-                if (touchPosition.x < 0)
-                {
-                    Debug.Log("Left");
-                    return 2;
-                }
-                else
-                {
-                    Debug.Log("Right");
-                    return 3;
-                }
-            }
+            return 1;
+        }
+        else if (left)
+        {
+            return 2;
+        }
+        else if (right)
+        {
+            return 3;
         }
         return -1;
     }
