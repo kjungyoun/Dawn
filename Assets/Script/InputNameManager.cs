@@ -31,8 +31,14 @@ public class InputNameManager : MonoBehaviour
     public void onClick()
     {
         // 이름 저장
-        Dialogue.yourName = yourName.text;
-        Dialogue.herName = herName.text;
+        if (!yourName.text.Equals(""))
+        {
+            Dialogue.yourName = yourName.text;
+        }
+        if (!herName.text.Equals(""))
+        {
+            Dialogue.herName = herName.text;
+        }
 
         Debug.Log(Dialogue.yourName);
         Debug.Log(Dialogue.herName);
