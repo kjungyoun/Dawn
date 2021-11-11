@@ -18,9 +18,16 @@ public class IntroSceneController : MonoBehaviour
 
     private void Update()
     {
+        
+        if (Input.touchCount > 0)
+        {
+            SceneLoader.LoadScene("Stage");
+        }
+#if UNITY_EDITOR
         if (Input.anyKeyDown)
         {
             SceneLoader.LoadScene("Stage");
         }
+#endif
     }
 }
