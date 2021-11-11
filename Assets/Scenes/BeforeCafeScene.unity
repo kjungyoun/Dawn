@@ -216,14 +216,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: b12d4e560ed514340ab074ae5b432a7a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a370f0d31878340a99411f34925a2297, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -258,7 +258,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &756127205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,9 +835,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogue:
     sentences:
-    - "\uC6B0\uC5F0\uD788 \uC544\uB974\uBC14\uC774\uD2B8\uC5D0\uC11C \uB9CC\uB0AC\uC9C0\uB9CC,\n\uAC19\uC774
-      \uCDE8\uC5C5 \uC900\uBE44\uD558\uB294 \uCDE8\uC900\uC0DD\uC73C\uB85C\uC368\n\uB03D(\uC774)\uC640
-      \uB098\uB294 \uB9CE\uC774 \uAC00\uAE4C\uC6CC\uC84C\uB2E4."
+    - "\uADF8\uB807\uAC8C \uB03D(\uC774)\uC640 \uCE5C\uD574\uC9C4 \uB098\uB294\n\uAC19\uC774
+      \uCE74\uD398\uC5D0\uC11C \uCDE8\uC5C5 \uC900\uBE44\uB97C \uAC19\uC774\uD558\uACE4
+      \uD588\uB2E4."
     persons:
     - {fileID: 0}
     dialogueWindows:

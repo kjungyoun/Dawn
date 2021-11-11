@@ -64,7 +64,6 @@ public class DialogueManager : MonoBehaviour
 
     public void ShowDialogue(Dialogue dialogue)
     {
-        talking = true;
 
         for(int i=0; i<dialogue.sentences.Length; i++)
         {
@@ -98,7 +97,8 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator StartDialogueCoroutine()
     {
-        if(count > 0)
+        talking = true;
+        if (count > 0)
         {
             // 대화창 교체 (사람이 달라질 때)
             if (listDialogueWindows[count] != listDialogueWindows[count - 1])
@@ -137,7 +137,7 @@ public class DialogueManager : MonoBehaviour
         yield return new WaitForSeconds(0.3f);
 
         // 텍스트 출력
-        for(int i = 0; i<listSentences[count].Length; i++)
+        for (int i = 0; i<listSentences[count].Length; i++)
         {
             if(listSentences[count][i].Equals('뜐')) // 주인공 이름일 때
             {
@@ -161,12 +161,13 @@ public class DialogueManager : MonoBehaviour
             }
             yield return new WaitForSeconds(0.01f); // 출력 사이에 0.01초 딜레이 줌
         }
+        talking = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (talking)
+        if (!talking)
         {
             foreach (Touch touch in Input.touches)
             {
@@ -189,7 +190,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
 #if UNITY_EDITOR
-        if (talking)
+        if (!talking)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {

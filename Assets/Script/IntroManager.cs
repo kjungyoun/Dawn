@@ -2,28 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class IntroManager : MonoBehaviour
 {
+    public Image image;
+    public GameObject obj;
+    private FadeManager fadeManager;
 
-    public GameObject StartPanel;
-    public GameObject IntroPanel;
     // Start is called before the first frame update
     void Start()
     {
-      StartCoroutine(DelayTime(2));
-
+        fadeManager = FindObjectOfType<FadeManager>();
+        fadeManager.FadeOut(image);
+        StartCoroutine(HidePanel());
     }
-    IEnumerator DelayTime(float time)
-    {
-      yield return new WaitForSeconds(time);
 
-      IntroPanel.SetActive(false);
-      StartPanel.SetActive(true);
+    IEnumerator HidePanel()
+    {
+        yield return new WaitForSeconds(1.5f);
+        obj.SetActive(false);
+    }
+
+
+    IEnumerator StartLoadScene()
+    {
+        obj.SetActive(true);
+        fadeManager.FadeIn(image);
+
+        yield return new WaitForSeconds(1.5f);
+
+        SceneManager.LoadScene("InputNameScene");
     }
 
     public void GoGameScene()
     {
-        SceneManager.LoadScene("InputNameScene");
+        StartCoroutine(StartLoadScene());
     }
 }

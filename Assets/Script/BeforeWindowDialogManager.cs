@@ -63,8 +63,6 @@ public class BeforeWindowDialogManager : MonoBehaviour
 
     public void ShowDialogue(Dialogue dialogue)
     {
-        talking = true;
-
         for (int i = 0; i < dialogue.sentences.Length; i++)
         {
             // ListSenctences에 dialogue에 있는 모든 sentence 추가
@@ -97,7 +95,8 @@ public class BeforeWindowDialogManager : MonoBehaviour
 
     IEnumerator StartDialogueCoroutine()
     {
-        if(count == 4)
+        talking = true;
+        if (count == 4)
         {
             yield return new WaitForSeconds(0.8f);
         }
@@ -143,15 +142,35 @@ public class BeforeWindowDialogManager : MonoBehaviour
         // 텍스트 출력
         for (int i = 0; i < listSentences[count].Length; i++)
         {
-            text.text += listSentences[count][i]; // 1번째 문장, 가나다라마바사 한 글자씩 출력
+            if (listSentences[count][i].Equals('뜐')) // 주인공 이름일 때
+            {
+                for (int j = 0; j < Dialogue.yourName.Length; j++)
+                {
+                    text.text += Dialogue.yourName[j];
+                    yield return new WaitForSeconds(0.01f);
+                }
+            }
+            else if (listSentences[count][i].Equals('뀽')) // 상대방 이름일 때
+            {
+                for (int j = 0; j < Dialogue.herName.Length; j++)
+                {
+                    text.text += Dialogue.herName[j];
+                    yield return new WaitForSeconds(0.01f);
+                }
+            }
+            else // 이름이 아닐 때
+            {
+                text.text += listSentences[count][i]; // 1번째 문장, 가나다라마바사 한 글자씩 출력
+            }
             yield return new WaitForSeconds(0.01f); // 출력 사이에 0.01초 딜레이 줌
         }
+        talking = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (talking)
+        if (!talking)
         {
             foreach (Touch touch in Input.touches)
             {
@@ -174,7 +193,7 @@ public class BeforeWindowDialogManager : MonoBehaviour
             }
         }
 #if UNITY_EDITOR
-        if (talking)
+        if (!talking)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
