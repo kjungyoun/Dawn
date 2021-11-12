@@ -46,7 +46,7 @@ public class FinalDialogManager : MonoBehaviour
     public Image image; // fade 용 Image
     public string sceneName; // 전환할 scene 이름
 
-    private int flag = 1;
+    private int flag = 0;
 
     // Getter
     public int Count
