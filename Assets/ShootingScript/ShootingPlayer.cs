@@ -160,6 +160,11 @@ public class ShootingPlayer : MonoBehaviour
         isButtonB = true;
     }
 
+    public void ButtonBUp()
+    {
+        isButtonB = false;
+    }
+
     void Fire()
     {
         //if (!Input.GetButton("Fire1"))
