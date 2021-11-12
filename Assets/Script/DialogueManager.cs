@@ -214,7 +214,7 @@ public class DialogueManager : MonoBehaviour
         if (!talking && curTime >= maxTime)
         {
             if (Input.GetKeyDown(KeyCode.Space))
-            {
+            {   
                 count++;
                 text.text = "";
 
