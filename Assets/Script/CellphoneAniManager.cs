@@ -7,6 +7,8 @@ using UnityEngine.SceneManagement;
 public class CellphoneAniManager : MonoBehaviour
 {
     public static CellphoneAniManager instance;
+    private float curTime = 0f;
+    private float maxTime = 1.0f;
 
     #region Singleton
     private void Awake()
@@ -41,6 +43,8 @@ public class CellphoneAniManager : MonoBehaviour
     private FadeManager fadeManager;
     public Image image; // fade 용 Image
     public string sceneName; // 전환할 scene 이름
+
+    private int flag = 1;
 
     // Getter
     public int Count
@@ -167,10 +171,19 @@ public class CellphoneAniManager : MonoBehaviour
         talking = false;
     }
 
+    void curTimeUp()
+    {
+        curTime += Time.deltaTime;
+    }
+
     // Update is called once per frame
     void Update()
     {
-        if (!talking)
+        curTimeUp();
+        if (curTime < maxTime)
+            return;
+
+        if (!talking && curTime >= maxTime)
         {
             foreach (Touch touch in Input.touches)
             {
@@ -179,10 +192,18 @@ public class CellphoneAniManager : MonoBehaviour
                     count++;
                     text.text = "";
 
-                    if (count == listSentences.Count) // 마지막 대화일 때
+                    if (count >= listSentences.Count)
+                    {
+                        flag++;
+                    }
+                    if (flag == 1 && count >= listSentences.Count) // 마지막 대화일 때
                     {
                         StopAllCoroutines();
                         ExitDialogue(); // 대화 종료
+                    }
+                    else if (flag > 1)
+                    {
+                        return;
                     }
                     else
                     {
@@ -193,17 +214,25 @@ public class CellphoneAniManager : MonoBehaviour
             }
         }
 #if UNITY_EDITOR
-        if (!talking)
+        if (!talking && curTime >= maxTime)
         {
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 count++;
                 text.text = "";
 
-                if (count == listSentences.Count) // 마지막 대화일 때
+                if (count >= listSentences.Count)
+                {
+                    flag++;
+                }
+                if (flag == 1 && count >= listSentences.Count) // 마지막 대화일 때
                 {
                     StopAllCoroutines();
                     ExitDialogue(); // 대화 종료
+                }
+                else if (flag > 1)
+                {
+                    return;
                 }
                 else
                 {
