@@ -47,6 +47,7 @@ public class GoHomeDialogManager: MonoBehaviour
     public string sceneName; // 전환할 scene 이름
 
     private int flag = 0;
+
     // Getter
     public int Count
     {
@@ -64,6 +65,7 @@ public class GoHomeDialogManager: MonoBehaviour
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+        talking = true;
     }
 
     public void ShowDialogue(Dialogue dialogue)
@@ -84,7 +86,7 @@ public class GoHomeDialogManager: MonoBehaviour
     }
 
     public void ExitDialogue()
-    {
+    {   
         count = 0;
         text.text = "";
         listSentences.Clear();
@@ -217,8 +219,8 @@ public class GoHomeDialogManager: MonoBehaviour
                     }
                     if (flag == 1 && count >= listSentences.Count) // 마지막 대화일 때
                     {
-                        StopAllCoroutines();
-                        ExitDialogue(); // 대화 종료
+                            StopAllCoroutines();
+                            ExitDialogue(); // 대화 종료
                     }
                     else if (flag > 1)
                     {
