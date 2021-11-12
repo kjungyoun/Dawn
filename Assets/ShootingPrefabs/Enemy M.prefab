@@ -152,5 +152,5 @@ MonoBehaviour:
   patternIndex: 0
   curPatternCount: 0
   maxPatternCount: 
-  maxShotDelay: 1
+  maxShotDelay: 4
   curShotDelay: 0

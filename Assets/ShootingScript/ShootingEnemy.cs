@@ -58,7 +58,7 @@ public class ShootingEnemy : MonoBehaviour
             bullet.transform.position = transform.position;
             Rigidbody2D rigid = bullet.GetComponent<Rigidbody2D>();
             Vector3 dirVec = player.transform.position - transform.position;
-            rigid.AddForce(dirVec.normalized * 5, ForceMode2D.Impulse);
+            rigid.AddForce(dirVec.normalized * 3, ForceMode2D.Impulse);
         }
         else if (enemyName == "L")
         {
@@ -74,8 +74,8 @@ public class ShootingEnemy : MonoBehaviour
             Vector3 dirVecR = player.transform.position - (transform.position + Vector3.right * 0.3f);
             Vector3 dirVecL = player.transform.position - (transform.position + Vector3.left * 0.3f);
 
-            rigidR.AddForce(dirVecR.normalized * 5, ForceMode2D.Impulse);
-            rigidL.AddForce(dirVecL.normalized * 5, ForceMode2D.Impulse);
+            rigidR.AddForce(dirVecR.normalized * 3, ForceMode2D.Impulse);
+            rigidL.AddForce(dirVecL.normalized * 3, ForceMode2D.Impulse);
         }
 
         curShotDelay = 0;
@@ -101,17 +101,19 @@ public class ShootingEnemy : MonoBehaviour
         switch(enemyName)
         {
             case "B":
-                health = 3000;
+                health = 5000;
                 Invoke("Stop", 2f);
                 break;
             case "L":
-                health = 30;
+                health = 35;
+                Invoke("StopEnemyNotBoos", 3f);
                 break;
             case "M":
-                health = 15;
+                health = 10;
                 break;
             case "S":
                 health = 5;
+                Invoke("StopEnemyNotBoos", 3f);
                 break;
         }
     }
@@ -127,6 +129,17 @@ public class ShootingEnemy : MonoBehaviour
         rigid.velocity = Vector2.zero;
 
         Invoke("Think", 2f);
+    }
+
+    void StopEnemyNotBoos()
+    {
+        if (!gameObject.activeSelf)
+        {
+            return;
+        }
+
+        Rigidbody2D rigid = GetComponent<Rigidbody2D>();
+        rigid.velocity = Vector2.zero;
     }
 
     void Think() // 보스가 공격을 뭐로 할지 생각하는 것임
@@ -305,7 +318,7 @@ public class ShootingEnemy : MonoBehaviour
                 GameObject itemCoin = objectManager.MakeObj("ItemCoin");
                 itemCoin.transform.position = transform.position;
             }
-            else if(ran < 3) // boom
+            else if(ran < 6) // boom
             {
                 GameObject itemBoom = objectManager.MakeObj("ItemBoom");
                 itemBoom.transform.position = transform.position;
