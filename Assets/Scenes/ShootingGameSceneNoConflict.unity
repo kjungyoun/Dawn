@@ -5727,7 +5727,7 @@ MonoBehaviour:
   isTouchLeft: 0
   life: 3
   score: 0
-  boom: 0
+  boom: 3
   maxBoom: 3
   bulletObjA: {fileID: 2043225416395911121, guid: 98a8351e76f564140a0fea5e34eb719f, type: 3}
   bulletObjB: {fileID: 1960723104440329075, guid: da3beb4675d2e42fbad90b34c134ad3e, type: 3}
@@ -5740,8 +5740,8 @@ MonoBehaviour:
   objectManager: {fileID: 1988908512}
   speed: 5
   maxPower: 6
-  power: 3
-  maxShotDelay: 0.1
+  power: 1
+  maxShotDelay: 0.2
   curShotDelay: 0
   isHit: 0
   isBoomTime: 0
