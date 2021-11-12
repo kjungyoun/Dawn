@@ -106,14 +106,12 @@ public class ShootingEnemy : MonoBehaviour
                 break;
             case "L":
                 health = 35;
-                Invoke("StopEnemyNotBoos", 3f);
                 break;
             case "M":
                 health = 10;
                 break;
             case "S":
                 health = 5;
-                Invoke("StopEnemyNotBoos", 3f);
                 break;
         }
     }
