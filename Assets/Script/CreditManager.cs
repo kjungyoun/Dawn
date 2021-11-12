@@ -26,12 +26,12 @@ public class CreditManager : MonoBehaviour
 
         credit.SetActive(true);
 
-        yield return new WaitForSeconds(46);
+        yield return new WaitForSeconds(61);
 
         fadeManager.FadeIn(image);
 
         yield return new WaitForSeconds(1.5f);
 
-        SceneLoader.LoadScene("IntroScene");
+        SceneLoader.LoadScene("EndingScene");
     }
 }

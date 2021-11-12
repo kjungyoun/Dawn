@@ -66,6 +66,7 @@ public class FinalDialogManager : MonoBehaviour
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
         memoryAnis = new List<Animator>();
+        talking = true;
     }
 
     public void ShowDialogue(FinalDialogueCustom dialogue)

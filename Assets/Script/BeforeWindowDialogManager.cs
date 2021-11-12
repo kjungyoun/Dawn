@@ -63,6 +63,7 @@ public class BeforeWindowDialogManager : MonoBehaviour
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+        talking = true;
     }
 
     public void ShowDialogue(Dialogue dialogue)
@@ -76,7 +77,6 @@ public class BeforeWindowDialogManager : MonoBehaviour
             // window list에 추가
             listDialogueWindows.Add(dialogue.dialogueWindows[i]);
         }
-        talking = true;
 
         aniSprite.SetBool("isAppear", true);
         aniDialogueWindow.SetBool("isAppear", true);

@@ -63,6 +63,7 @@ public class CellphoneAniManager : MonoBehaviour
         listSentences = new List<string>();
         listSprites = new List<Sprite>();
         listDialogueWindows = new List<Sprite>();
+        talking = true;
     }
 
     public void ShowDialogue(Dialogue dialogue)
