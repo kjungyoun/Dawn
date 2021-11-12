@@ -21,9 +21,9 @@ public class Twinkle : MonoBehaviour
     {
         while (true)
         {
-            yield return StartCoroutine(FadeEffect(1, 0));
+            yield return StartCoroutine(FadeEffect(1, (float)0.5));
 
-            yield return StartCoroutine(FadeEffect(0, 1));
+            yield return StartCoroutine(FadeEffect((float)0.5, 1));
         }
     }
 
