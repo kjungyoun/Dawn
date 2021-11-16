@@ -1351,4 +1351,4 @@ MonoBehaviour:
   aniDialogueWindow: {fileID: 585441255}
   talking: 0
   image: {fileID: 1276437551}
-  sceneName: DishGameStartScene
+  sceneName: AfterDishFailedScene

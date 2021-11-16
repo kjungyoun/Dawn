@@ -23,7 +23,7 @@ public class DishGameManager : MonoBehaviour
     IEnumerator LoadCoroutine()
     {
         yield return new WaitForSeconds(0.9f);
-        SceneLoader.LoadScene("Stage");
+        SceneLoader.LoadScene("Failed");
     }
 
     public void ShowGuide()

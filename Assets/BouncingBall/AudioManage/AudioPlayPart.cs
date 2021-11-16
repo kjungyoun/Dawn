@@ -22,7 +22,7 @@ public class AudioPlayPart : MonoBehaviour
         musicpart = gameObject;
         audioSource = GetComponent<AudioSource>();
 
-        if(SceneManager.GetActiveScene().name == "DishGameStartScene")
+        if(SceneManager.GetActiveScene().name == "CafeScene")
         {
             Destroy(musicpart);
         }
