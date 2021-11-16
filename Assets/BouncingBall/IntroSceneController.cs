@@ -11,9 +11,9 @@ public class IntroSceneController : MonoBehaviour
 
         PlayerPrefs.SetInt("StageIndex", 0);
 
-        //DirectoryInfo directory = new DirectoryInfo(Application.streamingAssetsPath);
+        DirectoryInfo directory = new DirectoryInfo(Application.streamingAssetsPath);
 
-        //StageController.maxStageCount = directory.GetFiles().Length / 2;
+        StageController.maxStageCount = directory.GetFiles().Length / 2;
     }
 
     private void Update()

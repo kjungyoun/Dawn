@@ -15,7 +15,7 @@ public class DishGameManager : MonoBehaviour
 
         PlayerPrefs.SetInt("StageIndex", 0);
         DirectoryInfo directory = new DirectoryInfo(Application.streamingAssetsPath);
-        StageController.maxStageCount = 6;
+        StageController.maxStageCount = 3;
 
         Anigame.SetBool("isClick", true);
         StartCoroutine(LoadCoroutine());

@@ -19,7 +19,7 @@ public class StageController : MonoBehaviour
     {
         MapDataLoader mapDataLoader = new MapDataLoader();
 
-        int index = PlayerPrefs.GetInt("StageIndex") + 1;
+        int index = PlayerPrefs.GetInt("StageIndex")+1;
 
         string currentStage = index < 10 ? $"Stage0{index}" : $"Stage{index}";
 
