@@ -14,7 +14,6 @@ public class DishGameManager : MonoBehaviour
         //Application.runInBackground = true;
 
         PlayerPrefs.SetInt("StageIndex", 0);
-        DirectoryInfo directory = new DirectoryInfo(Application.streamingAssetsPath);
         StageController.maxStageCount = 3;
 
         Anigame.SetBool("isClick", true);
